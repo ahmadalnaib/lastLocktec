@@ -64,7 +64,7 @@ class ActionController extends Controller
         ]);
 
         $request->session()->flash('msg', 'Action created');
-        return redirect()->route('create');
+        return redirect()->route('actions.index');
     }
 
     /**
@@ -129,7 +129,7 @@ class ActionController extends Controller
 
 
         $request->session()->flash('msg', 'Task was successful!');
-        return redirect()->route('index');
+        return redirect()->route('actions.index');
     }
 
     /**

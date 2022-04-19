@@ -15,7 +15,7 @@
 @endif
 <div class="col-md-12 bg-white p-4">
   <h2 class="my-4">Edit Action</h2>
-  <form action="{{route('update',$action->id)}}" method="post" enctype="multipart/form-data">
+  <form action="{{route('actions.update',$action->id)}}" method="post" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 
@@ -34,7 +34,7 @@
      </textarea>
     </div>
     <div class="form-group mb-3 p-3">
-      
+
       <textarea class="form-control" name="tecnische"  cols="30" rows="10"  placeholder=" Tecnische Details">
         {{$action->tecnische}}
       </textarea>

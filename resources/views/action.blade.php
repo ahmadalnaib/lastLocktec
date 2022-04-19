@@ -40,16 +40,18 @@
           </div>
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>num</th>
                   <th>Title</th>
                   <th>Slug </th>
-                  <th> Content</th>
+                  <th>Content</th>
                   <th>Writer  </th>
                   <th>Publised  </th>
                   <th>Categories  </th>
+                  <th>Edit</th>
+                  <th>Delete</th>
                 </tr>
               </thead>
               <tbody>

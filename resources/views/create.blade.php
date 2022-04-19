@@ -14,8 +14,8 @@
 @endforeach
 @endif
 <div class="col-md-12 bg-white p-4">
-  <h2 class="my-4">Add New Action</h2>
-  <form action="{{route('store')}}" method="post" enctype="multipart/form-data">
+  <h2 class="my-4">Add New Action Site</h2>
+  <form action="{{route('actions.store')}}" method="post" enctype="multipart/form-data">
     @csrf
 
     <div class="form-group mb-3 p-3">
@@ -31,7 +31,7 @@
      <textarea class="form-control" name="body"  cols="30" rows="10" placeholder="Body"></textarea>
     </div>
     <div class="form-group mb-3 p-3">
-      
+
       <textarea class="form-control" name="tecnische"  cols="30" rows="10"  placeholder=" Tecnische Details"></textarea>
     </div>
     <div class="form-group mb-3 p-3">
