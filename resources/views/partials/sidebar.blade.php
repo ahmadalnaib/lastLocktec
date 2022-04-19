@@ -2,10 +2,10 @@
     <nav id="admin-nav">
       <ul>
       <li>
-      <a href="#">Home</a>
+      <a href="{{route('home')}}">Home</a>
      </li>
      <li>
-      <a href="{{route('create')}}">Create ActionSite</a>
+      <a href="{{route('actions.create')}}">Create ActionSite</a>
      </li>
      </ul>
    </nav>

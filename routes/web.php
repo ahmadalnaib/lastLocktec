@@ -24,6 +24,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 
-Route::get('/',[ActionController::class,'getByCategory']);
+// Route::get('/actions',[ActionController::class,'getByCategory']);
 
-Route::resource('/',ActionController::class);
+Route::resource('/actions',ActionController::class);

@@ -16,8 +16,8 @@ class ActionController extends Controller
     public function index()
     {
 
-        $actions = Action::with('category:id,title')->whereApproved(true)->latest()->get();
-        return view('action', compact('actions'));
+        $actions=Action::with('user','category')->paginate(10);
+        return view('action',compact('actions'));
     }
 
     /**
@@ -126,7 +126,7 @@ class ActionController extends Controller
             $action->category_id=>request('category_id'),
             $action->save()
         ]);
-         
+
 
         $request->session()->flash('msg', 'Task was successful!');
         return redirect()->route('index');
