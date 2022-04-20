@@ -25,6 +25,8 @@
       </select>
     </div>
 
+
+
     <div class="form-group mb-3 p-3">
       <input type="text" class="form-control" name="title" placeholder="Title" value="{{$action->title}}">
     </div>
@@ -45,7 +47,7 @@
 
     <div class="form-group mb-3 p-3">
       <label for="details">upload Image</label>
-      <img class="form-control w-25 h-25" src="{{$action->image_path}}" alt="">
+      <td><img width="100px" height="100px"  class="img-thumbnail " src="{{asset('storage/'.$action->image_path)}}" alt=""></td>
       <input type="file" name="image_path" class="form-control">
     </div>
 

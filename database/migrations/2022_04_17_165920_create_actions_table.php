@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('price');
             $table->string('image_path');
             $table->integer('user_id')->unsigned();
-            $table->boolean('approved')->default(false);
             $table->integer('category_id')->unsigned();
             $table->timestamps();
         });

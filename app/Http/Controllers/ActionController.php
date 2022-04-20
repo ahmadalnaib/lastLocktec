@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Action;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ActionController extends Controller
 {
@@ -17,7 +18,7 @@ class ActionController extends Controller
     {
 
         $actions=Action::with('user','category')->paginate(10);
-        return view('action',compact('actions'));
+        return view('actions.index',compact('actions'));
     }
 
     /**
@@ -27,7 +28,7 @@ class ActionController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('actions.create');
     }
 
     /**
@@ -48,23 +49,21 @@ class ActionController extends Controller
             "tecnische" => "required",
 
         ]);
-        $image_path = request('image_path');
-        $photo_new_name = time() . $image_path->getClientOriginalName();
-        $image_path->move('uploads/actions', $photo_new_name);
+
 
         $action = Action::create([
             'title' => $request->title,
             'body' => $request->body,
             'tecnische' => $request->tecnische,
-            'image_path' => "uploads/actions/" . $photo_new_name,
+            'image_path'=>$request->image_path->store('images','public'),
             'price' => $request->price,
             'category_id' => $request->category_id,
             'user_id' => auth()->user()->id,
             'slug' => str_slug($request->title),
         ]);
 
-        $request->session()->flash('msg', 'Action created');
-        return redirect()->route('actions.index');
+        return redirect()->route('actions.index')
+        ->with('success','Actions Create successfully');
     }
 
     /**
@@ -87,7 +86,7 @@ class ActionController extends Controller
     public function edit($id)
     {
         $action = Action::findOrFail($id);
-        return view('edit', compact('action'));
+        return view('actions.edit', compact('action'));
     }
 
     /**
@@ -97,39 +96,20 @@ class ActionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Action $action)
     {
-        $action=Action::findOrFail($id);
+        $data=$request->only(['title','body','tecnische','price','category_id']);
 
-        $request->validate([
-            "title" => 'required',
-            "body" => 'required',
-            'category_id' => 'required',
-            "image_path" => "required|image",
-            "price" => "required",
-            "tecnische" => "required",
-
-        ]);
-        if($request->hasFile('image_path')){
-            $image_path=request('image_path');
-            $photo_new_name=time().$image_path->getClientOriginalName();
-            $image_path->move('uploads/posts/',$photo_new_name);
-
-            $image_path->photo='uploads/actions/'.$photo_new_name;
-        }
-
-        $action->update([
-            $action->title= request('title') ,
-            $action->body= request('body') ,
-            $action->price= request('price') ,
-            $action->tecnische= request('tecnische') ,
-            $action->category_id=>request('category_id'),
-            $action->save()
-        ]);
+      if($request->hasFile('image_path')){
+          $image=$request->image_path->store('images','public');
+          Storage::disk('public')->delete($action->image_path);
+          $data['image_path']=$image;
+      }
+        $action->update($data);
 
 
-        $request->session()->flash('msg', 'Task was successful!');
-        return redirect()->route('actions.index');
+        return redirect()->route('actions.index')
+            ->with('success','Job updated successfully');
     }
 
     /**
@@ -138,9 +118,13 @@ class ActionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Action $action)
     {
-        //
+        // $this->authorize('delete',$action);
+      $action->delete();
+        Storage::disk('public')->delete($action->image_path);
+        $action->delete();
+        return redirect()->back();
     }
 
 

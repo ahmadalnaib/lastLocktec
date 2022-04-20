@@ -5,7 +5,10 @@
       <a href="{{route('home')}}">Home</a>
      </li>
      <li>
-      <a href="{{route('actions.create')}}">Create ActionSite</a>
+      <a href="{{route('actions.index')}}"> ActionsSite</a>
+     </li>
+     <li>
+      <a href="{{route('categories.index')}}">Categories</a>
      </li>
      </ul>
    </nav>

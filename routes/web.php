@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ActionController;
+use App\Http\Controllers\CategoriesController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +29,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('/actions',[ActionController::class,'getByCategory']);
 
 Route::resource('/actions',ActionController::class);
+Route::resource('/categories',CategoriesController::class);

@@ -33,22 +33,27 @@
 
 
 <div class="container-fluid">
+    <div class="d-flex justify-content-end mb-2">
+        <a href="{{route('actions.create')}}" class="btn btn-success">Add Action</a>
+    </div>
       <div class="card mb-3">
 
         <div class="card-header">
           <i class="fa fa-table"></i> Actions
           </div>
+          @if($actions->count())
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>num</th>
+                  <th>Image</th>
                   <th>Title</th>
                   <th>Slug </th>
                   <th>Content</th>
                   <th>Writer  </th>
-                  <th>Publised  </th>
+
                   <th>Categories  </th>
                   <th>Edit</th>
                   <th>Delete</th>
@@ -58,29 +63,35 @@
               @foreach($actions as $action)
                 <tr>
                   <td>{{$action->id}}</td>
+                  <td><img width="100px" height="100px"  class="img-thumbnail " src="{{asset('storage/'.$action->image_path)}}" alt=""></td>
                   <td>{{ $action->title }}</td>
                   <td>{{$action->slug}}</td>
                   <td>{{ str_limit($action->body,100)}}</td>
                   <td>{{$action->user->name}}</td>
-                  <td><input type="checkbox" value="{{$action->approved}}" {{$action->approved ? 'checked' : ''}}></td>
                   <td>{{$action->category->title}}</td>
                   <td>
-                    <a class="btn btn-primary" href="">
+                    <a class="btn btn-primary" href="{{route('actions.edit',$action->id)}}">
                       <i class="fa fa-edit "></i>
                     </a>
                   </td>
                   <td>
-                    <form method="post" action="">
+                    <form method="post" action="{{route('actions.destroy',$action)}}">
                       @csrf
                       @method('DELETE')
-                      <button type="submit" class="btn btn-link"><i class="fa fa-trash "></i> </button>
+                      <button onclick="return confirm('are you sure ?')"  type="submit" class="btn btn-danger "><i class="fa fa-trash "></i> </button>
                     </form>
                   </td>
                 </tr>
               @endforeach
               </tbody>
             </table>
+            {!! $actions->links() !!}
           </div>
+          @else
+          <div class="lead text-center">
+              <p>There are no Actions</p>
+          </div>
+      @endif
         </div>
         <div class="card-footer small text-muted"></div>
       </div>
