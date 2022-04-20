@@ -14,6 +14,6 @@
    </nav>
 <header id="toggle" class="toggle">
 <button id="btn-admin">
-<i class="bi bi-list"></i>
+<i class="bi bi-list fa-2x"></i>
 </button>
 </header>

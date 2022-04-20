@@ -68,7 +68,7 @@
                   <td>{{$action->slug}}</td>
                   <td>{{ str_limit($action->body,100)}}</td>
                   <td>{{$action->user->name}}</td>
-                  <td>{{$action->category->title}}</td>
+                  <td>{{$action->category->title ?? 'No Cateory'}}</td>
                   <td>
                     <a class="btn btn-primary" href="{{route('actions.edit',$action->id)}}">
                       <i class="fa fa-edit "></i>

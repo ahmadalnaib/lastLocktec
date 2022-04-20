@@ -1,9 +1,7 @@
 @extends('layouts.app')
 @include('partials.navbar')
 @section('content')
-<div class="container">
 
-<div class="container">
 <div class="row">
         <div class="col-xl-4 col-sm-6 mb-3">
           <div class="card text-white bg-danger o-hidden h-100">
@@ -57,5 +55,5 @@
       </div>
 
 </div>
-</div>
+
 @endsection
