@@ -147,16 +147,21 @@
         <p class="carousel__parg">Suchen Sie in den Lockers.</p>
 
         @foreach($categories as $category)
+
+
+
         <div class="carousel__product">
             <h2 class="carousel__product__title">{{$category->title}}</h2>
 
         <!-- CLICK & Collect -->
 
+        @if($category->actions->count() > 0)
           <!-- Slider main container -->
           <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
+
               @foreach($category->actions as $action)
               <div class="swiper-slide">
                 <img src="{{asset('storage/'.$action->image_path)}}" alt="">
@@ -175,6 +180,7 @@
               </div>
 
               @endforeach
+
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -186,9 +192,14 @@
           </div>
 
 
-
+        </div>    @else
+        <div class="lead text-center">
+            <div>Currently there is no discount product available for that category</div>
         </div>
+    @endif
+
         @endforeach
+
 
 
 

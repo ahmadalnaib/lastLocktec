@@ -4,7 +4,7 @@
 
     <div class="container mt-5">
         <div class="d-flex justify-content-end mb-2">
-            <a href="{{route('categories.create')}}" class="btn btn-success btn-lg">Add category</a>
+            <a href="{{route('categories.create')}}" class="btn btn-secondary btn-lg">Add category</a>
         </div>
 
 
@@ -42,6 +42,7 @@
 
                         </tbody>
                     </table>
+
                     {!! $categories->links() !!}
                 </div>
 
@@ -53,5 +54,6 @@
                 </div>
             @endif
         </div>
+        <a href="{{route('home')}}" class="btn btn-outline-dark mt-4">Back</a>
     </div>
 @endsection

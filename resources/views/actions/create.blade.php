@@ -55,7 +55,10 @@
     <div class="form-group mb-3 p-3">
       <label for="image_path">upload Image:</label>
       <input type="file" name="image_path" class="form-control">
-      <small class="text-danger">Max Image Size 2048</small>
+     <div class="mt-2">
+        <small class="text-muted">Max Image Width:1200*Height:800</small><br>
+        <small class="text-muted">Max Image Size:2048</small>
+     </div>
     </div>
 
     <button type="submit" class="btn  btn-danger btn-lg ">Create Actionsite</button>

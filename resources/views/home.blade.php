@@ -27,7 +27,7 @@
               </div>
               <h2 class="mr-5">Categories {{$categories_count}}  </h2>
             </div>
-            <a class="card-footer text-dark bg-white small z-1" href="">
+            <a class="card-footer text-dark bg-white small z-1" href="{{route('categories.index')}}">
               <span class="float-left">More Info</span>
               <span class="float-right">
               &#8594;
