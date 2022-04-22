@@ -44,7 +44,7 @@ class ActionController extends Controller
             "title" => 'required',
             "body" => 'required',
             'category_id' => 'required',
-            "image_path" => "required|image",
+            "image_path" => "required|image|max:2048",
             "price" => "required",
             "tecnische" => "required",
 
@@ -98,6 +98,15 @@ class ActionController extends Controller
      */
     public function update(Request $request, Action $action)
     {
+        $request->validate([
+            "title" => 'required',
+            "body" => 'required',
+            'category_id' => 'required',
+            "image_path" => "required|image|max:2048",
+            "price" => "required",
+            "tecnische" => "required",
+
+        ]);
         $data=$request->only(['title','body','tecnische','price','category_id']);
 
       if($request->hasFile('image_path')){

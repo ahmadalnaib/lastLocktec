@@ -23,22 +23,33 @@
   />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
-    
-    
 
-      
+
+       
+
         <main class="py-4 container">
-        
+
             @yield('content')
-            
+          
         </main>
     </div>
+<script>
+     $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
 
 
+
+
+3
+4
+
+    </script>
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
     <script src="https://kit.fontawesome.com/ca11177b7a.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

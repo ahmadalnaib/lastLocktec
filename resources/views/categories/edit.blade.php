@@ -28,8 +28,8 @@
                         <label for="title">Title</label>
                         <input type="text"  id='title' class="form-control" name="title" value="{{$category->title}}">
                     </div>
-                    <div class="form-group">
-                        <button class="btn btn-success">save Category</button>
+                    <div class="form-group mt-4">
+                        <button class="btn btn-success">Update Category</button>
                     </div>
                 </form>
             </div>

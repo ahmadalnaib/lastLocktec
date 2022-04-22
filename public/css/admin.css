@@ -10,7 +10,7 @@ body{
 }
 
 body.show-nav{
-  transform: translateX(400px);
+  transform: translateX(200px);
 }
 
 #admin-nav{
@@ -20,7 +20,7 @@ body.show-nav{
   position:fixed;
   top:0;
   left:0;
-  width:400px;
+  width:200px;
   height:100vh;
   z-index:100;
   transform:translateX(-100%);
@@ -42,7 +42,7 @@ body.show-nav{
 #admin-nav ul li a{
   color:#fff;
   text-decoration:none;
-  font-size: 2rem;
+  font-size: 1.2rem;
 
 }
 
@@ -58,7 +58,7 @@ body.show-nav{
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
- padding: 21px 34px;
+ padding: 15px 25px;
 
 }
 
@@ -79,3 +79,5 @@ body.show-nav{
   max-width: 100%;
   width: 800px;
 }
+
+

@@ -12,7 +12,7 @@
               <h2 class="mr-5">Actions {{$actions_count}} </h2>
             </div>
             <a class="card-footer text-dark bg-white  z-1" href="{{route('actions.index')}}">
-              <span class="float-left">more</span>
+              <span class="float-left">More Info</span>
               <span class="float-right">
               &#8594;
               </span>
@@ -28,7 +28,7 @@
               <h2 class="mr-5">Categories {{$categories_count}}  </h2>
             </div>
             <a class="card-footer text-dark bg-white small z-1" href="">
-              <span class="float-left">more</span>
+              <span class="float-left">More Info</span>
               <span class="float-right">
               &#8594;
               </span>
@@ -44,7 +44,7 @@
               <h2 class="mr-5">Users {{$users_count}} </h2>
             </div>
             <a class="card-footer text-dark bg-white z-1" href=" ">
-              <span class="float-left">more</span>
+              <span class="float-left">More Info</span>
               <span class="float-right">
               &#8594;
               </span>

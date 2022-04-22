@@ -34,7 +34,7 @@
 
 <div class="container-fluid">
     <div class="d-flex justify-content-end mb-2">
-        <a href="{{route('actions.create')}}" class="btn btn-success">Add Action</a>
+        <a href="{{route('actions.create')}}" class="btn btn-success btn-lg">Add Action</a>
     </div>
       <div class="card mb-3">
 

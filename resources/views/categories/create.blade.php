@@ -13,7 +13,7 @@
                 <form action="{{route('categories.store')}}" method="post" >
                     @csrf
                     <div class="form-group ">
-                        <label for="title">Category </label>
+                        <label for="title">Category</label>
                         <input type="text"  id='title' class="form-control" name="title" value="{{old('title')}}">
                     </div>
 

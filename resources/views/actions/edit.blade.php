@@ -20,6 +20,9 @@
     @method('PUT')
 
     <div class="form-group mb-3 p-3">
+        <label for="title">
+            Category:
+          </label>
       <select name="category_id" class="form-control">
         @include('lists.categories')
       </select>
@@ -28,21 +31,32 @@
 
 
     <div class="form-group mb-3 p-3">
+        <label for="title">
+            Title:
+          </label>
       <input type="text" class="form-control" name="title" placeholder="Title" value="{{$action->title}}">
     </div>
     <div class="form-group mb-3 p-3">
-     <textarea class="form-control" name="body"  cols="30" rows="10" placeholder="Body">
+        <label  for="body">
+            Body:
+          </label>
+     <textarea class="form-control ckeditor" name="body"  cols="30" rows="10" placeholder="Body">
        {{$action->body}}
      </textarea>
     </div>
     <div class="form-group mb-3 p-3">
-
-      <textarea class="form-control" name="tecnische"  cols="30" rows="10"  placeholder=" Tecnische Details">
+        <label  for="body">
+            Tecnische Details:
+          </label>
+      <textarea class="form-control ckeditor" name="tecnische"  cols="30" rows="10"  placeholder=" Tecnische Details">
         {{$action->tecnische}}
       </textarea>
     </div>
     <div class="form-group mb-3 p-3">
-      <input type="text" class="form-control" name="price" placeholder="Price" value="{{$action->price}}">
+        <label  for="body">
+           Price:
+          </label>
+      <input type="text" class="form-control " name="price" placeholder="Price" value="{{$action->price}}">
     </div>
 
     <div class="form-group mb-3 p-3">
@@ -51,7 +65,7 @@
       <input type="file" name="image_path" class="form-control">
     </div>
 
-    <button type="submit" class="btn  btn-danger">Create</button>
+    <button type="submit" class="btn  btn-danger">Update</button>
   </form>
 </div>
 

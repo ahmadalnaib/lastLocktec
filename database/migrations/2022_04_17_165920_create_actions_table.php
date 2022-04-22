@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug')->unique()->nullable();
             $table->text('body');
-            $table->text('tecnische');
-            $table->string('price');
+            $table->longText('tecnische');
+            $table->decimal('price',8,2);
             $table->string('image_path');
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
