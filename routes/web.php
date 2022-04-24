@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ActionController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,8 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[MainController::class,'index']);
+Route::get('/change-language/{locale}',[LocaleController::class,'switch'])->name('change.language');
 
+
+
+Route::middleware(['web'])->group(function(){
+
+
+  
+  Route::get('/',[MainController::class,'index']);
 
 Auth::routes();
 
@@ -30,3 +38,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/actions',ActionController::class);
 Route::resource('/categories',CategoriesController::class);
 
+});

@@ -10,7 +10,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav me-auto">
+            
+            {{-- <li class="nav-item dropdown">
+                 <a href="#" class="nav-link dropdown-toggle" id="languagesDropdown" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                    English <span class="caret"></span>
+                 </a>
 
+                 <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                  <a href="#" class="dropsown-item">Deutsch</a>
+                 </div>
+                
+            </li> --}}
 
           </ul>
 
