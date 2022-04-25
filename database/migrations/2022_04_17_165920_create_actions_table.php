@@ -18,7 +18,7 @@ return new class extends Migration
             $table->json('title');
             $table->json('body');
             $table->json('tecnische');
-            $table->decimal('price',8,2);
+            $table->string('price');
             $table->string('image_path')->nullable();
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();

@@ -30,34 +30,57 @@
 
 
 
-    <div class="form-group mb-3 p-3">
-        <label for="title">
-            Title:
-          </label>
-      <input type="text" class="form-control" name="title" placeholder="Title" value="{{$action->title}}">
-    </div>
-    <div class="form-group mb-3 p-3">
-        <label  for="body">
-            Body:
-          </label>
-     <textarea class="form-control ckeditor" name="body"  cols="30" rows="10" placeholder="Body">
-       {{$action->body}}
-     </textarea>
-    </div>
-    <div class="form-group mb-3 p-3">
-        <label  for="body">
-            Tecnische Details:
-          </label>
-      <textarea class="form-control ckeditor" name="tecnische"  cols="30" rows="10"  placeholder=" Tecnische Details">
-        {{$action->tecnische}}
-      </textarea>
-    </div>
-    <div class="form-group mb-3 p-3">
-        <label  for="body">
-           Price:
-          </label>
-      <input type="text" class="form-control " name="price" placeholder="Price" value="{{$action->price}}">
-    </div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        @foreach (config('locales.languages') as $key => $val)
+        <li class="nav-item" role="presentation">
+          <a class="nav-link {{$loop->index ==0 ? 'active':''}}"
+            id="{{$key}}-tab"
+             data-bs-toggle="tab"
+             href="#{{$key}}"
+              role="tab"
+             aria-controls="{{$key}}"
+              aria-selected="true">{{$val['name']}}</a>
+        </li>
+        @endforeach
+
+      </ul>
+     <div class="tab-content" id="myTabContent">
+        @foreach (config('locales.languages') as $key => $val)
+        <div class="tab-pane fade {{$loop->index ==0 ? 'show active' :''}}" id="{{$key}}" role="tabpanel" aria-labelledby="{{$key}}-tab">
+
+          <div class="form-group mb-3 p-3">
+            <label for="title">
+                {{__('actions.title')}} ({{$key}})
+              </label>
+          <input type="text" class="form-control" name="title[{{$key}}]" value="{{old('title.' . $key,$action->getTranslation('title',$key))}}" placeholder="Title">
+        </div>
+        <div class="form-group mb-3 p-3">
+            <label  for="body">
+                Body: ({{$key}})
+              </label>
+         <textarea class="form-control "  name="body[{{$key}}]"  cols="30" rows="10" placeholder="Body">
+          {{old('body.' .$key,$action->getTranslation('body',$key))}}
+         </textarea>
+        </div>
+        <div class="form-group mb-3 p-3">
+            <label  for="body">
+                Tecnische Details: ({{$key}})
+              </label>
+          <textarea class="form-control ckeditor"  name="tecnische[{{$key}}]"  cols="30" rows="10"  placeholder="Tecnische Details">
+            {{old('tecnische.' .$key,$action->getTranslation('tecnische',$key))}}
+          </textarea>
+        </div>
+        <div class="form-group mb-3 p-3">
+            <label  for="price">
+                Price: ({{$key}})
+              </label>
+          <input type="text" class="form-control" name="price[{{$key}}]" value="{{old('price.' .$key,$action->getTranslation('price',$key))}}" placeholder="Price">
+        </div>
+        </div>
+        @endforeach
+
+      </div>
+
 
     <div class="form-group mb-3 p-3">
       <label for="details">upload Image</label>

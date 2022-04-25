@@ -24,10 +24,39 @@
                 <form action="{{route('categories.update',$category->id)}}" method="post">
                     @csrf
                     @method('put')
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text"  id='title' class="form-control" name="title" value="{{$category->title}}">
-                    </div>
+
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        @foreach (config('locales.languages') as $key => $val)
+        <li class="nav-item" role="presentation">
+          <a class="nav-link {{$loop->index ==0 ? 'active':''}}"
+            id="{{$key}}-tab"
+             data-bs-toggle="tab"
+             href="#{{$key}}"
+              role="tab"
+             aria-controls="{{$key}}"
+              aria-selected="true">{{$val['name']}}</a>
+        </li>
+        @endforeach
+
+      </ul>
+     <div class="tab-content" id="myTabContent">
+        @foreach (config('locales.languages') as $key => $val)
+        <div class="tab-pane fade {{$loop->index ==0 ? 'show active' :''}}" id="{{$key}}" role="tabpanel" aria-labelledby="{{$key}}-tab">
+
+          <div class="form-group mb-3 p-3">
+            <label for="title">
+                {{__('actions.title')}} ({{$key}})
+              </label>
+          <input type="text" class="form-control" name="title[{{$key}}]" value="{{old('title.' . $key,$category->getTranslation('title',$key))}}" placeholder="Title">
+        </div>
+
+
+
+        </div>
+        @endforeach
+
+      </div>
                     <div class="form-group mt-4">
                         <button class="btn btn-success">Update Category</button>
                     </div>

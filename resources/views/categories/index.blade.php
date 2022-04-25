@@ -4,7 +4,7 @@
 
     <div class="container mt-5">
         <div class="d-flex justify-content-end mb-2">
-            <a href="{{route('categories.create')}}" class="btn btn-secondary btn-lg">Add category</a>
+            <a href="{{route('categories.create')}}" class="btn btn-secondary btn-lg">{{__('actions.add_category')}}</a>
         </div>
 
 
@@ -28,13 +28,13 @@
 
 
                                 <td>
-                                    <a href="{{route('categories.edit',$category->id)}}" class="btn btn-dark">Edit</a>
+                                    <a href="{{route('categories.edit',$category->id)}}" class="btn btn-dark">{{__('actions.edit')}}</a>
                                 </td>
                                 <td>
                                     <form action="{{route('categories.destroy',$category->id)}}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <button class="btn btn-danger" type="submit">Delete</button>
+                                        <button class="btn btn-danger" type="submit">{{__('actions.delete')}}</button>
                                     </form>
                             </td>
                             </tr>
@@ -54,6 +54,6 @@
                 </div>
             @endif
         </div>
-        <a href="{{route('home')}}" class="btn btn-outline-dark mt-4">Back</a>
+        <a href="{{route('home')}}" class="btn btn-outline-dark mt-4">{{__('actions.back')}}</a>
     </div>
 @endsection

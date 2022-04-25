@@ -10,16 +10,13 @@ use Spatie\Translatable\HasTranslations;
 class Action extends Model
 {
     protected $guarded =[];
-    
+
     use HasFactory,HasTranslations;
 
 
-    public function asJason($value)
-    {
-        return json_encode($value,JSON_UNESCAPED_UNICODE);
-    }
 
-    public $translatable = ['title','body','tecnische'];
+
+    public $translatable = ['title','body','tecnische','price'];
 
     public  function getPhotoAttribute($image_path)
     {
@@ -27,7 +24,7 @@ class Action extends Model
     }
 
 
-    
+
 
 
     public function user()
@@ -43,7 +40,5 @@ class Action extends Model
     }
 
 
-    protected $casts = [
-        'data' => 'array',
-    ];
+
 }

@@ -44,12 +44,11 @@ class CategoriesController extends Controller
         $request->validate([
             "title" => 'required',
 
+        ]);
 
-        ]);
-        Category::create([
-            'title'=>$request->title,
-        ]);
-        return  redirect()->route('categories.index')
+              $data['title']=$request->title;
+              $category = Category::create($data);
+              return  redirect()->route('categories.index')
               ->with('success','Category created succesfully');
     }
 

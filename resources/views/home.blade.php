@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="row">
-        <div class="col-xl-4 col-sm-6 mb-3">
+        <div class="col-xl-6 col-sm-6 mb-3">
           <div class="card text-white bg-danger o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
@@ -19,7 +19,7 @@
             </a>
           </div>
         </div>
-        <div class="col-xl-4 col-sm-6 mb-3">
+        <div class="col-xl-6 col-sm-6 mb-3">
           <div class="card text-white bg-danger o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
@@ -35,22 +35,7 @@
             </a>
           </div>
         </div>
-        <div class="col-xl-4 col-sm-6 mb-3 ">
-          <div class="card text-white bg-danger o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-users fa-3x"></i>
-              </div>
-              <h2 class="mr-5">Users {{$users_count}} </h2>
-            </div>
-            <a class="card-footer text-dark bg-white z-1" href=" ">
-              <span class="float-left">More Info</span>
-              <span class="float-right">
-              &#8594;
-              </span>
-            </a>
-          </div>
-        </div>
+
 
       </div>
 

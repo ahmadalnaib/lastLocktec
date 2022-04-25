@@ -25,29 +25,14 @@
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
 <body class="bg-white">
-  <div class="dropdown">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-     {{config('locales.languages')[app()->getLocale()]['name']}}
-    </a>
-  
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      @foreach (config('locales.languages') as $key=>$val)
-          
-      @if ($key != app()->getLocale())
-      <li><a class="dropdown-item" href="{{route('change.language',$key)}}">{{$val['name']}}</a></li>
-      @endif
-   
-      @endforeach
-    </ul>
-  </div>
+   @include('partials.langNav')
     <!-- contianer -->
     <!-- Header Section -->
     <section class="header__main bg-gray ">
     <div class="container">
-        <h1 class="header__title">Hier finden Sie unsere Aktionsanlagen.</h1>
+        <h1 class="header__title">{{__('actions.Hier_finden')}}</h1>
         <p class="header__subtitle">
-          Neben dem attraktiven Preis, haben Sie den Vorteil einer schnelleren
-          Lieferung.
+         {{__('actions.Neben')}}
         </p>
     </div>
       </section>
@@ -55,18 +40,12 @@
   <div class="container">
       <!-- Showcase Section -->
       <section class="showcase__main">
-        <h2 class="showcase__title">Click & Collect – leicht gemacht</h2>
+        <h2 class="showcase__title">{{__('actions.Click')}}</h2>
         <h3 class="showcase__subtitle">
-          Mobile Pickup Stationen, Übergabeautomaten und Lieferstationen
+        {{__('actions.Mobile')}}
         </h3>
         <p class="showcase__parg">
-          Mit unseren kompakten Stand-Alone Abholboxen wollen wir Warenübergabe
-          sicherer machen. Übergabe kann dank der Paketboxen kontaktlos
-          erfolgen. Unsere Plug & Play Anlagen können im Innen- und Außenbereich
-          aufgestellt werden. Angepasst auf das stetig steigende Interesse des
-          Einzelhandels und kleinerer Unternehmen, sowie der momentanen
-          Situation fokussieren wir unsere Kapazitäten auf günstige und eine
-          Schließfachlösungen für Jedermann.
+         {{__('actions.Mit_unseren')}}
         </p>
         <!--
        <div>
@@ -90,13 +69,13 @@
          </div>
 
          <div class="Kontaktlose-content">
-          <h2>Kontaktlose Übergabe & Lieferung</h2>
+          <h2>{{__('actions.Kontaktlose')}}</h2>
           <ul>
-            <li>Kontaklose Übergabeprozesse</li>
-            <li>Sichere Lieferung von Waren oder Paketen</li>
-            <li>Simple Inbetriebnahme-Plug and Play</li>
-            <li>Sofort einsetzbar</li>
-            <li>Liferzeit auf Anfrage</li>
+            <li>{{__('actions.Kontaklose_Übergabeprozesse')}}</li>
+            <li>{{__('actions.sichere')}}</li>
+            <li>{{__('actions.simple')}}</li>
+            <li>{{__('actions.sofort')}}</li>
+            <li>{{__('actions.lifezeit')}}</li>
           </ul>
          </div>
 
@@ -108,7 +87,7 @@
       <!-- Angebote Section -->
       <section class="angebote__main">
 
-        <h2 class="angebote__title">Neue Angebote</h2>
+        <h2 class="angebote__title">{{__('actions.Neue')}}</h2>
         @if($actions->count())
     @foreach ($actions as $action)
 
@@ -144,7 +123,7 @@
         @endforeach
         @else
         <div class="lead text-center">
-            <p>There are no Action</p>
+            <p>{{__('actions.There_are_no_Action')}}</p>
         </div>
     @endif
       </section>
@@ -159,7 +138,7 @@
 
       <section class="carousel__main">
         <h2 class="carousel__title">Lockers</h2>
-        <p class="carousel__parg">Suchen Sie in den Lockers.</p>
+        <p class="carousel__parg">{{__('actions.Search_the_lockers')}}.</p>
 
         @foreach($categories as $category)
 

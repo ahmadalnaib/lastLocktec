@@ -41,42 +41,14 @@ class ActionController extends Controller
     public function store(Request $request)
     {
 
-        // $request->validate([
-        //     "title" => 'required',
-        //     "body" => 'required',
-        //     'category_id' => 'required',
-        //     "image_path" => "required|image|max:2048",
-        //     "price" => "required",
-        //     "tecnische" => "required",
 
-        // ]);
-
-
-        // $action = Action::create([
-        // 'title' => $request->title,
-        // 'body' => $request->body,
-        // 'tecnische' => $request->tecnische,
-        // //'image_path'=>$request->image_path->store('images','public'),
-        // 'price' => $request->price,
-        // 'category_id' => $request->category_id,
-
-
-
-
-
-
-        //  ]);
-
-        //  return redirect()->route('actions.index')
-        //  ->with('success','Actions Create successfully');
-
-        // $attr=[];
 
         // foreach(config('locales.languages') as $key =>$val){
         //     $attr['title.' .$key]= 'required';
         //     $attr['body.' .$key]='required';
-
-
+        //     $attr['tecnische.' .$key]='required';
+        //     $attr['image_path.' .$key]='required';
+        //     $attr['category_id.' .$key]='required';
         // }
 
         // $validation=Validator::make($request->all(),$attr);
@@ -85,24 +57,17 @@ class ActionController extends Controller
         //     return redirect()->back()->withErrors($validation)->withInput();
         // }
 
-
-        // $data['title']=$request->title;
-        // $data['body']=$request->body;
-        // $data['tecnische']=$request->tecnische;
-        // $data['price']=$request->price;
-        // // $data['category_id' = $request->category_id;
-        // // 'user_id' = auth()->user()->id;
-        // // 'image_path'=$request->image_path->store('images','public');
-
-        // $action=Action::create($data);
-        // return redirect()->route('actions.index');
-
-        
-        $data['title'] = $request->title;
-        $data['body'] = $request->body;
-        $data['tecnische'] = $request->tecnische;
-        $data['price'] = $request->price;
+        // dd($request->all());
+        $data['title']=$request->title;
+        $data['body']=$request->body;
+        $data['tecnische']=$request->tecnische;
+        $data['price']=$request->price;
+        $data['image_path']=$request->image_path->store('images','public');
+        $data['user_id']= auth()->user()->id;
+        $data['category_id'] = $request->category_id;
         $action = Action::create($data);
+        return redirect()->route('actions.index');
+
     }
 
     /**
@@ -137,27 +102,21 @@ class ActionController extends Controller
      */
     public function update(Request $request, Action $action)
     {
-        $request->validate([
-            "title" => 'required',
-            "body" => 'required',
-            'category_id' => 'required',
-            "image_path" => "required|image|max:2048",
-            "price" => "required",
-            "tecnische" => "required",
-
-        ]);
-        $data = $request->only(['title', 'body', 'tecnische', 'price', 'category_id']);
 
         if ($request->hasFile('image_path')) {
             $image = $request->image_path->store('images', 'public');
             Storage::disk('public')->delete($action->image_path);
             $data['image_path'] = $image;
         }
+        $data['title']=$request->title;
+        $data['body']=$request->body;
+        $data['tecnische']=$request->tecnische;
+        $data['price']=$request->price;
+        $data['user_id']= auth()->user()->id;
+        $data['category_id'] = $request->category_id;
         $action->update($data);
-
-
         return redirect()->route('actions.index')
-            ->with('success', 'Job updated successfully');
+        ->with('success','Job updated successfully');
     }
 
     /**
@@ -171,8 +130,10 @@ class ActionController extends Controller
         // $this->authorize('delete',$action);
         $action->delete();
         Storage::disk('public')->delete($action->image_path);
-        $action->delete();
-        return redirect()->back();
+        // $action->delete();
+        // return redirect()->back();
+        // $action = Action::where(app()->getLocale(), $action)->first()->delete();
+        return redirect()->route('actions.index');
     }
 
 

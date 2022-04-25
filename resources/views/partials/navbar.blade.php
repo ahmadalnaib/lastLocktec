@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm p-4">
   <div class="container">
-      <a class="link-danger" href="{{ url('/') }}">
-      <h2>Go TO Main Site</h2>
+      <a class="link-danger pe-4" href="{{ url('/') }}">
+      <h2>{{__('actions.go')}}</h2>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>
@@ -9,8 +9,8 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
-          <ul class="navbar-nav me-auto">
-            
+          <ul class="navbar-nav me-auto ">
+
             {{-- <li class="nav-item dropdown">
                  <a href="#" class="nav-link dropdown-toggle" id="languagesDropdown" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                     English <span class="caret"></span>
@@ -19,8 +19,9 @@
                  <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                   <a href="#" class="dropsown-item">Deutsch</a>
                  </div>
-                
+
             </li> --}}
+            @include('partials.langNav')
 
           </ul>
 
