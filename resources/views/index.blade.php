@@ -168,7 +168,7 @@
             data-bs-target="#a-{{$action->id}}"
                   class="swiper__button"
                 >
-                  Tecnische Daten
+              {{__('actions.Technical_specifications')}}
                 </button>
                  </div>
               </div>
@@ -188,7 +188,7 @@
 
         </div>    @else
         <div class="lead text-center">
-            <div>Currently there is no discount product available for that category</div>
+            <div>{{__('actions.currently')}}</div>
         </div>
     @endif
 

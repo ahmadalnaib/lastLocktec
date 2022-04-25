@@ -29,7 +29,9 @@ Lieferung.',
 'edit'=>'bearbeiten',
 'delete'=>'Löschen',
 'There_are_no_Action'=>'Es gibt keine Aktion',
-'Search_the_lockers'=>'Suchen Sie in den Schließfächer.'
+'Search_the_lockers'=>'Suchen Sie in den Schließfächer.',
+'Technical_specifications'=>'Tecnische Daten',
+'currently'=>'Für diese Kategorie ist derzeit kein Rabattprodukt verfügbar'
 
 
 

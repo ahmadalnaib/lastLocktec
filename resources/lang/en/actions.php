@@ -29,6 +29,8 @@ return[
 'add_category'=>'Add Categoy',
 'There_are_no_Action'=>'There are no Action',
 'Search_the_lockers'=>'Search the lockers.',
+'Technical_specifications'=>'Technical Specifications',
+'currently'=>'Currently there is no discount product available for that category'
 
 
 
