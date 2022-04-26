@@ -24,18 +24,18 @@ Route::get('/change-language/{locale}',[LocaleController::class,'switch'])->name
 Route::middleware(['web'])->group(function(){
 
 
-  
+
   Route::get('/',[MainController::class,'index']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 
 
 
 // Route::get('/actions',[ActionController::class,'getByCategory']);
 
-Route::resource('/actions',ActionController::class);
-Route::resource('/categories',CategoriesController::class);
+Route::resource('/actions',ActionController::class)->middleware('auth');
+Route::resource('/categories',CategoriesController::class)->middleware('auth');
 
 });

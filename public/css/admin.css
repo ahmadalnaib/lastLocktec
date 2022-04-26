@@ -1,6 +1,6 @@
 
 :root{
-  --primary-color:#30336b;
+  --primary-color:#fff;
   --secondary-color:#CE111E;
 }
 
@@ -10,17 +10,17 @@ body{
 }
 
 body.show-nav{
-  transform: translateX(200px);
+  transform: translateX(300px);
 }
 
 #admin-nav{
   background:var(--primary-color);
-  border-right:2px solid rgba(200,200,200,0.1);
+  border-right:2px solid rgba(200,200,200,0.5);
   color:#fff;
   position:fixed;
   top:0;
   left:0;
-  width:200px;
+  width:300px;
   height:100vh;
   z-index:100;
   transform:translateX(-100%);
@@ -35,14 +35,15 @@ body.show-nav{
 
 
 #admin-nav ul li{
-  border-bottom:2px solid rgba(200,200,200,0.1);
+  border-bottom:2px solid rgba(200,200,200,0.3);
   padding:15px;
 }
 
 #admin-nav ul li a{
-  color:#fff;
+  color:#333;
   text-decoration:none;
   font-size: 1.2rem;
+  font-weight: bolder;
 
 }
 

@@ -1,14 +1,17 @@
     {{-- admin nav --}}
     <nav id="admin-nav">
       <ul>
+          <li class="text-center">
+              <img  width="100px" src="{{url('logo.svg')}}" alt="">
+          </li>
       <li>
-      <a href="{{route('home')}}">Home</a>
+      <a   href="{{route('home')}}"><i class="bi bi-house-door text-dark"></i> Home</a>
      </li>
      <li>
-      <a href="{{route('actions.index')}}"> ActionsSite</a>
+      <a href="{{route('actions.index')}}"><i class="bi bi-back text-dark"></i> {{__('actions.ActionsSite')}}</a>
      </li>
      <li>
-      <a href="{{route('categories.index')}}">Categories</a>
+      <a href="{{route('categories.index')}}"><i class="bi bi-collection text-dark"></i> {{__('actions.Categories')}}</a>
      </li>
      </ul>
    </nav>

@@ -94,7 +94,7 @@
         <div class="angebote__product">
           <div class="product__content p-4">
             <h2 class="product__title">{{$action->title}}</h2>
-            <span class="product__price">ab {{$action->price}} EUR</span>
+            <span class="product__price">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
             <p class="product__parg">
 
             {{ $action->body }}
@@ -162,7 +162,7 @@
                <h2 >{{$action->title}}</h2>
                 <p>{{ $action->body }}</p>
                 <div class="swiper__price__footer">
-                  <span class="swiper__price">ab {{$action->price}} EUR</span>
+                  <span class="swiper__price">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
                   <button
                   data-bs-toggle="modal"
             data-bs-target="#a-{{$action->id}}"

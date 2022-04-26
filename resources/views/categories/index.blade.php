@@ -34,7 +34,7 @@
                                     <form action="{{route('categories.destroy',$category->id)}}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <button class="btn btn-danger" type="submit">{{__('actions.delete')}}</button>
+                                        <button  onclick="return confirm('are you sure ?')"  class="btn btn-danger" type="submit">{{__('actions.delete')}}</button>
                                     </form>
                             </td>
                             </tr>

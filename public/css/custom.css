@@ -135,7 +135,7 @@ body {
 }
 
 
-.angebote__product:nth-child(3) {
+.angebote__product:nth-child(4) {
     flex-direction: row-reverse;
 }
 

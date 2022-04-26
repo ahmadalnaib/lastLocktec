@@ -22,7 +22,7 @@ Lieferung.',
 'lifezeit'=>'Liferzeit auf Anfrage',
 'Neue'=>'Neue Angebote',
 'Add_Action'=>'Aktion hinzufügen',
-'go'=>'Gehen  zur Hauptseite',
+'go'=>'Gehen zur Hauptseite',
 'back'=>'zurück',
 'add'=>'Neue Aktionsseite hinzufügen',
 'add_category'=>'Kategorie hinzufügen',
@@ -31,7 +31,14 @@ Lieferung.',
 'There_are_no_Action'=>'Es gibt keine Aktion',
 'Search_the_lockers'=>'Suchen Sie in den Schließfächer.',
 'Technical_specifications'=>'Tecnische Daten',
-'currently'=>'Für diese Kategorie ist derzeit kein Rabattprodukt verfügbar'
+'currently'=>'Für diese Kategorie ist derzeit kein Rabattprodukt verfügbar',
+'Contact_us'=>'Kontaktiere uns',
+'Close'=>'Schließen',
+'ActionsSite'=>'AktionenSite',
+'Categories'=>'Kategorien',
+'Total_Actions'=>'Aktionen insgesamt',
+'More_Info'=>'Mehr Info',
+'Total_Categories'=>'Kategorien insgesamt'
 
 
 

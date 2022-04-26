@@ -20,7 +20,7 @@ return[
 'lifezeit'=>'Lifetime on request',
 'Neue'=>'New offers',
 'Add_Action'=>'Add action',
-'go'=>'Go TO Main Site',
+'go'=>'Go to main site',
 'back'=>'Back',
 'add'=>'Add New Action Site',
 'add_category'=>'Add Category',
@@ -30,7 +30,14 @@ return[
 'There_are_no_Action'=>'There are no Action',
 'Search_the_lockers'=>'Search the lockers.',
 'Technical_specifications'=>'Technical Specifications',
-'currently'=>'Currently there is no discount product available for that category'
+'currently'=>'Currently there is no discount product available for that category',
+'Contact_us'=>'Contact us',
+'Close'=>'Close',
+'ActionsSite'=>'ActionsSite',
+'Categories'=>'Categories',
+'Total_Actions'=>'Total Actions',
+'More_Info'=>'More Info',
+'Total_Categories'=>'Total Categories'
 
 
 

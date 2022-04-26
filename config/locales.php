@@ -1,12 +1,12 @@
 <?php
 
 return[
-  'fallback_locale' => 'en',
+  'fallback_locale' => 'de',
 
   'languages'=>[
+    'de'=>['lang'=>'de','unicode'=>'de_DE','rtl_support'=>false,'name'=>'Deutsch'],
+    'en'=>['lang'=>'en','unicode'=>'en_US','rtl_support'=>false,'name'=>'English']
 
-    'en'=>['lang'=>'en','unicode'=>'en_US','rtl_support'=>false,'name'=>'English'],
-    'de'=>['lang'=>'de','unicode'=>'de_DE','rtl_support'=>false,'name'=>'Deutsch']
 
   ]
 ];

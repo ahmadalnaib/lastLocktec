@@ -1,6 +1,6 @@
 <div class="dropdown">
-    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-     {{config('locales.languages')[app()->getLocale()]['name']}}
+    <i class="bi bi-translate"></i>   <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          {{config('locales.languages')[app()->getLocale()]['name']}}
     </a>
 
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">

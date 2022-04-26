@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm p-4">
   <div class="container">
       <a class="link-danger pe-4" href="{{ url('/') }}">
-      <h2>{{__('actions.go')}}</h2>
+      <h4>{{__('actions.go')}}</h4>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>

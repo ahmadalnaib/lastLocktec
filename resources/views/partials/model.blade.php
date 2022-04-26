@@ -12,7 +12,11 @@
           {!! $action->tecnische!!}
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{__('actions.Close')}}</button>
+          <a target="_blank" href="https://www.locktec.com/kontakt/" class="btn btn-outline-danger"
+          >{{__('actions.Contact_us')}}</a
+        >
 
         </div>
       </div>
