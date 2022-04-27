@@ -65,7 +65,7 @@
                   <td>{{$action->id}}</td>
                   <td><img width="100px" height="100px"  class="img-thumbnail " src="{{asset('storage/'.$action->image_path)}}" alt=""></td>
                   <td>{{ $action->title }}</td>
-                
+
                   <td>{{ str_limit($action->body,100)}}</td>
                   <td>{{$action->user->name}}</td>
                   <td>{{$action->category->title ?? 'No Cateory'}}</td>

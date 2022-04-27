@@ -37,7 +37,10 @@ return[
 'Categories'=>'Categories',
 'Total_Actions'=>'Total Actions',
 'More_Info'=>'More Info',
-'Total_Categories'=>'Total Categories'
+'Total_Categories'=>'Total Categories',
+'Manage_categories'=>'Manage Categories',
+'Manage_actions'=>'Manage Actions',
+
 
 
 

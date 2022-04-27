@@ -38,7 +38,9 @@ Lieferung.',
 'Categories'=>'Kategorien',
 'Total_Actions'=>'Aktionen insgesamt',
 'More_Info'=>'Mehr Info',
-'Total_Categories'=>'Kategorien insgesamt'
+'Total_Categories'=>'Kategorien insgesamt',
+'Manage_categories'=>'Kategorien verwalten',
+'Manage_actions'=>'Aktionen verwalten',
 
 
 

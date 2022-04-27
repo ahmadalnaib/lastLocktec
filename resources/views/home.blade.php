@@ -13,7 +13,7 @@
               <h3>{{$actions_count}} <i class="bi bi-graph-up text-warning"></i></h3>
             </div>
             <a class="card-footer text-dark bg-white  z-1" href="{{route('actions.index')}}">
-              <span class="float-left">{{__('actions.More_Info')}}</span>
+              <span class="float-left">{{__('actions.Manage_actions')}}</span>
               <span class="float-right">
               &#8594;
               </span>
@@ -30,7 +30,7 @@
               <h3> {{$categories_count}} <i class="bi bi-graph-up text-warning"></i></h3>
             </div>
             <a class="card-footer text-dark bg-white small z-1" href="{{route('categories.index')}}">
-              <span class="float-left">{{__('actions.More_Info')}}</span>
+              <span class="float-left">{{__('actions.Manage_categories')}}</span>
               <span class="float-right">
               &#8594;
               </span>

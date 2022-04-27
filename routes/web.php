@@ -4,6 +4,7 @@ use App\Http\Controllers\ActionController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\MetaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +28,8 @@ Route::middleware(['web'])->group(function(){
 
   Route::get('/',[MainController::class,'index']);
 
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
@@ -37,5 +40,18 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('/actions',ActionController::class)->middleware('auth');
 Route::resource('/categories',CategoriesController::class)->middleware('auth');
+
+
+// meta
+
+
+Route::get('/meta',[MetaController::class,'index'])->name('meta.index');
+Route::get('/meta/create',[MetaController::class,'create'])->name('meta.create');
+Route::post('/meta',[MetaController::class,'store'])->name('meta.store');
+Route::put('/meta',[MetaController::class,'update'])->name('meta.update');
+Route::get('/meta/{meta}/edit',[MetaController::class,'edit'])->name('meta.edit');
+
+
+
 
 });
