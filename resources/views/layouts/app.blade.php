@@ -32,7 +32,11 @@
 
 
         <main class="py-4 container">
-       
+            @if(session()->has('message'))
+            <div class="alert alert-success">
+                {{ session()->get('message') }}
+            </div>
+        @endif
             @yield('content')
 
         </main>

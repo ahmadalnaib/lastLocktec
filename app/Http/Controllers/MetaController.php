@@ -47,7 +47,7 @@ class MetaController extends Controller
               $data['keywords']=$request->keywords;
               $meta = Meta::create($data);
               return  redirect()->route('meta.index')
-              ->with('success','Meta created succesfully');
+              ->with('message','Meta created succesfully');
     }
 
     /**
@@ -100,7 +100,7 @@ class MetaController extends Controller
 
 
         return redirect()->route('meta.index')
-        ->with('success','Job updated successfully');
+        ->with('message','Meta updated successfully');
 
 
     }
