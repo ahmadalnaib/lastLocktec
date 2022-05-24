@@ -10,7 +10,7 @@
 
 
 <div class="col-md-12 bg-white p-4">
-  <h2 class="my-4">{{__('actions.add_category')}}</h2>
+  <h2 class="my-4">{{__('actions.add_meta')}}</h2>
   <form action="{{route('meta.store')}}" method="post">
     @csrf
 
@@ -66,7 +66,7 @@
 
 
 
-    <button type="submit" class="btn  btn-danger btn-lg ">{{__('actions.add_category')}}</button>
+    <button type="submit" class="btn  btn-danger btn-lg ">{{__('actions.add_meta')}}</button>
   </form>
 </div>
 

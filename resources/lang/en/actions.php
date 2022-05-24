@@ -42,7 +42,8 @@ return[
 'Manage_actions'=>'Manage Actions',
 'add_meta'=>'Add Meta',
 "Edit_Meta"=>"Edit Meta",
-"Update_Meta"=>"Update Meta"
+"Update_Meta"=>"Update Meta",
+
 
 
 
