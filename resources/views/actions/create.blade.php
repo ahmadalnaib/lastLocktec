@@ -71,7 +71,7 @@
           <label  for="price">
               Price: ({{$key}})
             </label>
-        <input type="text" class="form-control" name="price[{{$key}}]" value="{{old('price.' .$key)}}" placeholder="Price">
+        <input type="text" class="form-control" name="price" value="{{old('price.' .$key)}}" placeholder="Price">
       </div>
       </div>
       @endforeach

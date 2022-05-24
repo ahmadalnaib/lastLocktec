@@ -1,29 +1,23 @@
-
-
 @extends('layouts.app')
+
 @include('partials.navbar')
 @section('content')
-    <div class="container mt-5">
-        <div class="card card-default">
-            <div class="card-header">
-                Edit Tags
-            </div>
-
-            <div class="card-body">
-                @if($errors->any())
-                    <div class="alert alert-danger">
-                        <ul class="list-group">
-                            @foreach($errors->all() as $error)
-                                <li class="list-group-item text-danger">
-                                    {{$error}}
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                <form action="{{route('meta.update',$meta)}}" method="post">
-                    @csrf
-                    @method('put')
+@if (session('msg'))
+<div class="alert alert-success">
+    {{ session('msg') }}
+</div>
+@endif
+{{--        show errors--}}
+@if(count($errors)>0)
+@foreach($errors->all() as $error)
+    <div class="alert alert-danger">{{$error}}</div>
+@endforeach
+@endif
+<div class="col-md-12 bg-white p-4">
+  <h2 class="my-4">Edit Meta</h2>
+  <form action="{{route('meta.update',$meta->id)}}" method="post" >
+    @csrf
+    @method('PUT')
 
 
     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -43,44 +37,39 @@
      <div class="tab-content" id="myTabContent">
         @foreach (config('locales.languages') as $key => $val)
         <div class="tab-pane fade {{$loop->index ==0 ? 'show active' :''}}" id="{{$key}}" role="tabpanel" aria-labelledby="{{$key}}-tab">
-            <div class="form-group mb-3 p-3">
-                <label  for="body">
-                    Title: ({{$key}})
-                  </label>
-              <textarea class="form-control "  name="title[{{$key}}]"  cols="30" rows="10"  placeholder="description">
-                {{old('title.' .$key,$meta->getTranslation('title',$key))}}
-              </textarea>
-            </div>
 
-            <div class="form-group mb-3 p-3">
-                <label  for="body">
-                    Description: ({{$key}})
-                  </label>
-              <textarea class="form-control "  name="description[{{$key}}]"  cols="30" rows="10"  placeholder="description">
-                {{old('description.' .$key,$meta->getTranslation('description',$key))}}
-              </textarea>
-            </div>
-
-            <div class="form-group mb-3 p-3">
-                <label  for="body">
-                    Keywords: ({{$key}})
-                  </label>
-              <textarea class="form-control "  name="keywords[{{$key}}]"  cols="30" rows="10"  placeholder="keywords">
-                {{old('keywords.' .$key,$meta->getTranslation('keywords',$key))}}
-              </textarea>
-            </div>
-
-
+          <div class="form-group mb-3 p-3">
+            <label for="title">
+                {{__('meta.title')}} ({{$key}})
+              </label>
+          <input type="text" class="form-control" name="title[{{$key}}]" value="{{old('title.' . $key,$meta->getTranslation('title',$key))}}" placeholder="Title">
+        </div>
+        <div class="form-group mb-3 p-3">
+            <label  for="body">
+                Description: ({{$key}})
+              </label>
+         <textarea class="form-control "  name="description[{{$key}}]"  cols="30" rows="10" placeholder="description">
+          {{old('description.' .$key,$meta->getTranslation('description',$key))}}
+         </textarea>
+        </div>
+        <div class="form-group mb-3 p-3">
+            <label  for="body">
+                Keywords: ({{$key}})
+              </label>
+          <textarea class="form-control ckeditor"  name="keywords[{{$key}}]"  cols="30" rows="10"  placeholder="	Keywords Details">
+            {{old('keywords.' .$key,$meta->getTranslation('keywords',$key))}}
+          </textarea>
+        </div>
 
         </div>
         @endforeach
 
       </div>
-                    <div class="form-group mt-4">
-                        <button class="btn btn-success">Update Html Tags</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+
+
+
+    <button type="submit" class="btn  btn-danger">Update</button>
+  </form>
+</div>
+
 @endsection

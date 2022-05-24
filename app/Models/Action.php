@@ -16,7 +16,7 @@ class Action extends Model
 
 
 
-    public $translatable = ['title','body','tecnische','price'];
+    public $translatable = ['title','body','tecnische'];
 
     public  function getPhotoAttribute($image_path)
     {

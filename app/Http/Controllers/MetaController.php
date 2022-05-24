@@ -84,13 +84,23 @@ class MetaController extends Controller
      */
     public function update(Request $request, Meta $meta)
     {
-        $meta->update([
-            'title'=>$request->title,
-            'description'=>$request->description,
-            'keywords'=>$request->keywords
-        ]);
-        return  redirect()->route('meta.index')
-        ->with('success','Category has been updated');
+
+
+
+        $data['title']=$request->title;
+        $data['description']=$request->description;
+        $data['keywords']=$request->keywords;
+
+        $meta->update($data);
+        // $meta->update([
+        //     'title' => $request->title,
+        //     'description' => $request->description,
+        //     'keywords' => $request->keywords,
+        // ]);
+
+
+        return redirect()->route('meta.index')
+        ->with('success','Job updated successfully');
 
 
     }

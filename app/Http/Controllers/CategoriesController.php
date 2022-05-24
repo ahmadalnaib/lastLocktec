@@ -16,7 +16,6 @@ class CategoriesController extends Controller
     public function index()
     {
         //
-
         $categories=Category::latest()->simplePaginate(8);
         return  view('categories.index',compact('categories'));
     }
