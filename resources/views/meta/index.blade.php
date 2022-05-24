@@ -40,7 +40,7 @@
 
 
                                 <td>
-                                    <a href="{{route('meta.edit',$meta)}}" class="btn btn-dark">Edit</a>
+                                    <a href="{{route('meta.edit',$meta)}}" class="btn btn-dark"> {{__('actions.Edit_Meta')}}</a>
                                 </td>
 
                             </tr>

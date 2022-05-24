@@ -41,6 +41,9 @@ Lieferung.',
 'Total_Categories'=>'Kategorien insgesamt',
 'Manage_categories'=>'Kategorien verwalten',
 'Manage_actions'=>'Aktionen verwalten',
+'add_meta'=>'Meta hinzufüggen',
+"Edit_Meta"=>"Meta bearbeiten",
+"Update_Meta"=>"Meta aktualisieren"
 
 
 

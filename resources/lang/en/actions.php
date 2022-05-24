@@ -40,6 +40,9 @@ return[
 'Total_Categories'=>'Total Categories',
 'Manage_categories'=>'Manage Categories',
 'Manage_actions'=>'Manage Actions',
+'add_meta'=>'Add Meta',
+"Edit_Meta"=>"Edit Meta",
+"Update_Meta"=>"Update Meta"
 
 
 

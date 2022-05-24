@@ -68,7 +68,7 @@
 
 
 
-    <button type="submit" class="btn  btn-danger">Update</button>
+    <button type="submit" class="btn  btn-danger">{{__('actions.Update_Meta')}}</button>
   </form>
 </div>
 
