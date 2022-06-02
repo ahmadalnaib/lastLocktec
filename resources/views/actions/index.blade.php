@@ -32,7 +32,7 @@
 </div> -->
 
 
-<div class="container-fluid">
+<div class="container mt-5">
     <div class="d-flex justify-content-end mb-2">
         <a href="{{route('actions.create')}}" class="btn btn-secondary btn-lg btn-block">{{__('actions.Add_Action')}}</a>
     </div>
@@ -44,7 +44,7 @@
           @if($actions->count())
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
+            <table class="table " id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>num</th>

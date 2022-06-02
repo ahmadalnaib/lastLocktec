@@ -7,7 +7,7 @@
 
  <meta name="keywords" content="{{$meta->keywords}}">
  <meta name="description" content="{{$meta->description}}">
- <title>{{ $meta->title }}</title>
+ <title> {{ $meta->title }}</title>
  @endforeach
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

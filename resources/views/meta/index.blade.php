@@ -6,11 +6,12 @@
 
 
 <div class="d-flex justify-content-end mb-2">
-    <a href="{{route('meta.create')}}" class="btn btn-secondary btn-lg">{{__('actions.add_meta')}}</a>
+
+    <a   href="{{route('meta.create')}}" class="btn btn-secondary btn-lg @if($metas->count())    disabled d-none  @endif">{{__('actions.add_meta')}}</a>
 </div>
 
         <div class="card card-default">
-            <div class="card-header">HTML Tag</div>
+            <div class="card-header ">HTML Tag</div>
 
             @if($metas->count())
                 <div class="card-body">

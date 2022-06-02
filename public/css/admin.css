@@ -1,84 +1,77 @@
-
-:root{
-  --primary-color:#fff;
-  --secondary-color:#CE111E;
+:root {
+    --primary-color: #fff;
+    --secondary-color: #ce111e;
 }
 
-
-body{
-  transition: all 0.3s ease;
+body {
+    transition: all 0.3s ease;
 }
 
-body.show-nav{
-  transform: translateX(300px);
+body.show-nav {
+    transform: translateX(280px);
 }
 
-#admin-nav{
-  background:var(--primary-color);
-  border-right:2px solid rgba(200,200,200,0.5);
-  color:#fff;
-  position:fixed;
-  top:0;
-  left:0;
-  width:300px;
-  height:100vh;
-  z-index:100;
-  transform:translateX(-100%);
+#admin-nav {
+    background: var(--primary-color);
+    border-right: 2px solid rgba(200, 200, 200, 0.5);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-100%);
 }
 
-#admin-nav ul{
-  padding:0;
-  list-style:none;
-  margin:0;
+#admin-nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
 }
 
-
-
-#admin-nav ul li{
-  border-bottom:2px solid rgba(200,200,200,0.3);
-  padding:15px;
+#admin-nav ul li {
+    border-bottom: 2px solid rgba(200, 200, 200, 0.3);
+    padding: 15px;
 }
 
-#admin-nav ul li a{
-  color:#333;
-  text-decoration:none;
-  font-size: 1.2rem;
-  font-weight: bolder;
-
+#admin-nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
 }
 
-#admin-nav ul li a:hover{
-  text-decoration:underline;
+#admin-nav ul li a:hover {
+    text-decoration: underline;
 }
 
-
-
-#btn-admin{
-  background-color: var(--secondary-color);
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
- padding: 15px 25px;
-
+#btn-admin {
+    background-color: var(--secondary-color);
+    border: 0;
+    border-radius: 5px;
+ 
+    cursor: pointer;
+    padding: 8px 12px;
+ 
+  
 }
 
-#btn-admin:focus{
-  outline: none;
+#btn-admin:focus {
+    outline: none;
 }
 
-.toggle{
-  background-color: rgba(0,0,0,0.3);
-  position: absolute;
-  top: 10px;
-  left: 20px;
+.toggle {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 10px;
+    left: 20px;
 }
 
-.admin-container{
-  padding: 15px;
-  margin: 0 auto;
-  max-width: 100%;
-  width: 800px;
+.admin-container {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 800px;
 }
-
 

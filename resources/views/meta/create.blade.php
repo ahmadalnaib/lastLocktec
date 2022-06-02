@@ -36,7 +36,7 @@
 
         <div class="form-group mb-3 p-3">
           <label for="title">
-              {{__('meta.title')}} ({{$key}})
+           Title: ({{$key}})
             </label>
         <input type="text" class="form-control" name="title[{{$key}}]" value="{{old('title.' . $key)}}" placeholder="Title">
       </div>
