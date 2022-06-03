@@ -27,7 +27,7 @@ Route::middleware(['web'])->group(function(){
 
 
   Route::get('/',[MainController::class,'index']);
-
+  Route::get('/actionssite',[MainController::class,'actions']);
 
 
 Auth::routes();
