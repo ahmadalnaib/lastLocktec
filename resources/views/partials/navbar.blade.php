@@ -6,7 +6,7 @@
 
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav me-auto ">
-            @include('partials.langNav')
+          
         
 
 

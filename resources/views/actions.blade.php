@@ -85,7 +85,7 @@
             <button  class="product__button"
             data-bs-toggle="modal"
             data-bs-target="#a-{{$action->id}}">
-              Tecnische Daten
+            {{__('actions.Technical_specifications')}}
             </button>
 
           </div>
