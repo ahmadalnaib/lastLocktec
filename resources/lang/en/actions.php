@@ -1,7 +1,7 @@
 <?php
 
 return[
-
+"More_infomation_about_the_price"=>"More infomation about the price",
 'actions'=>'Actions',
 'id' =>'ID',
 'title'=>'Titel',

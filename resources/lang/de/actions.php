@@ -44,7 +44,8 @@ Lieferung.',
 'Manage_meta'=>'Meta verwalten',
 'add_meta'=>'Meta hinzufügen',
 "Edit_Meta"=>"Meta bearbeiten",
-"Update_Meta"=>"Meta aktualisieren"
+"Update_Meta"=>"Meta aktualisieren",
+"More_infomation_about_the_price"=>"Weitere Informationen über den Preis"
 
 
 

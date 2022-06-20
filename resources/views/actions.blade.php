@@ -80,7 +80,7 @@
             @if($action->price)
             <span class="product__price">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
             @else
-            <span>More infomation about the price <a target="_blank" href="https://www.locktec.com/kontakt/">Contact us</a></span>
+            <span>{{__('actions.More_infomation_about_the_price')}} <a target="_blank" href="https://www.locktec.com/kontakt/">{{__('actions.Contact_us')}}</a></span>
             @endif
             <p class="product__parg">
 
@@ -152,7 +152,9 @@
                   @if($action->price)
                   <span class="product__price">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
                   @else
-                  <span>More infomation about the price <a target="_blank" href="https://www.locktec.com/kontakt/">Contact us</a></span>
+                  <span class="d-block ">{{__('actions.More_infomation_about_the_price')}} <a class="mb-2" target="_blank" href="https://www.locktec.com/kontakt/">{{__('actions.Contact_us')}}</a></span>
+
+               
                   @endif
                   <button
                   data-bs-toggle="modal"
