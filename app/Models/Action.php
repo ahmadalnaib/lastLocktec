@@ -3,18 +3,28 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Concerns\HasAttributes;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class Action extends Model
 {
     protected $guarded =[];
-    use HasFactory;
 
+    use HasFactory,HasTranslations;
+
+
+
+
+    public $translatable = ['title','body','tecnische'];
 
     public  function getPhotoAttribute($image_path)
     {
       return asset($image_path);
     }
+
+
+
 
 
     public function user()
@@ -28,4 +38,7 @@ class Action extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+
+
 }

@@ -3,54 +3,41 @@
 @section('content')
 
 <div class="row">
-        <div class="col-xl-4 col-sm-6 mb-3">
-          <div class="card text-white bg-danger o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-              <i class="fas fa-fw fa-th-list fa-3x"></i>
+        <div class="col-xl-3 col-sm-3 mb-3">
+          <div class="card  o-hidden h-100">
+            <div class="card-body text-center">
+              <div class="card-body-icon fa-3x">
+              <img height="100%" width="100%" src="{{url('Campaign_launch_Flatline.svg')}}" alt="">
               </div>
-              <h2 class="mr-5">Actions {{$actions_count}} </h2>
+
             </div>
             <a class="card-footer text-dark bg-white  z-1" href="{{route('actions.index')}}">
-              <span class="float-left">More Info</span>
-              <span class="float-right">
-              &#8594;
-              </span>
+              <h4 class="float-left ">{{__('actions.Manage_actions')}} <i class="bi bi-arrow-right-square-fill"></i></h4>
+
             </a>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {{$actions_count}}
+             </span>
           </div>
         </div>
-        <div class="col-xl-4 col-sm-6 mb-3">
-          <div class="card text-white bg-danger o-hidden h-100">
-            <div class="card-body">
+        <div class="col-xl-3 col-sm-3 mb-3">
+          <div class="card   o-hidden h-100">
+            <div class="card-body text-center">
               <div class="card-body-icon">
-                <i class="fa fa-fw fa-list fa-3x"></i>
+                <img height="100%" width="100%" src="{{url('Data_organization_Outline.svg')}}" alt="">
               </div>
-              <h2 class="mr-5">Categories {{$categories_count}}  </h2>
+
             </div>
             <a class="card-footer text-dark bg-white small z-1" href="{{route('categories.index')}}">
-              <span class="float-left">More Info</span>
-              <span class="float-right">
-              &#8594;
-              </span>
+              <h4 class="float-left ">{{__('actions.Manage_categories')}} <i class="bi bi-arrow-right-square-fill"></i> </h4>
+
             </a>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                {{$categories_count}}
+               </span>
           </div>
         </div>
-        <div class="col-xl-4 col-sm-6 mb-3 ">
-          <div class="card text-white bg-danger o-hidden h-100">
-            <div class="card-body">
-              <div class="card-body-icon">
-                <i class="fa fa-fw fa-users fa-3x"></i>
-              </div>
-              <h2 class="mr-5">Users {{$users_count}} </h2>
-            </div>
-            <a class="card-footer text-dark bg-white z-1" href=" ">
-              <span class="float-left">More Info</span>
-              <span class="float-right">
-              &#8594;
-              </span>
-            </a>
-          </div>
-        </div>
+
 
       </div>
 

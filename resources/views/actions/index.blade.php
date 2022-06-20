@@ -32,9 +32,9 @@
 </div> -->
 
 
-<div class="container-fluid">
+<div class="container mt-5">
     <div class="d-flex justify-content-end mb-2">
-        <a href="{{route('actions.create')}}" class="btn btn-secondary btn-lg btn-block">Add Action</a>
+        <a href="{{route('actions.create')}}" class="btn btn-secondary btn-lg btn-block">{{__('actions.Add_Action')}}</a>
     </div>
       <div class="card mb-3">
 
@@ -44,13 +44,13 @@
           @if($actions->count())
         <div class="card-body">
           <div class="table-responsive">
-            <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
+            <table class="table " id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
                   <th>num</th>
                   <th>Image</th>
                   <th>Title</th>
-                  <th>Slug </th>
+
                   <th>Content</th>
                   <th>Writer  </th>
 
@@ -65,7 +65,7 @@
                   <td>{{$action->id}}</td>
                   <td><img width="100px" height="100px"  class="img-thumbnail " src="{{asset('storage/'.$action->image_path)}}" alt=""></td>
                   <td>{{ $action->title }}</td>
-                  <td>{{$action->slug}}</td>
+
                   <td>{{ str_limit($action->body,100)}}</td>
                   <td>{{$action->user->name}}</td>
                   <td>{{$action->category->title ?? 'No Cateory'}}</td>
@@ -95,6 +95,6 @@
         </div>
         <div class="card-footer small text-muted"></div>
       </div>
-      <a href="{{route('home')}}" class="btn btn-outline-dark mt-4">Back</a>
+      <a href="{{route('home')}}" class="btn btn-outline-dark mt-4">{{__('actions.back')}}</a>
     </div>
 @endsection

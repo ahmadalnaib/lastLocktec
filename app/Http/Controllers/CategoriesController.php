@@ -16,7 +16,6 @@ class CategoriesController extends Controller
     public function index()
     {
         //
-
         $categories=Category::latest()->simplePaginate(8);
         return  view('categories.index',compact('categories'));
     }
@@ -44,13 +43,12 @@ class CategoriesController extends Controller
         $request->validate([
             "title" => 'required',
 
+        ]);
 
-        ]);
-        Category::create([
-            'title'=>$request->title,
-        ]);
-        return  redirect()->route('categories.index')
-              ->with('success','Category created succesfully');
+              $data['title']=$request->title;
+              $category = Category::create($data);
+              return  redirect()->route('categories.index')
+              ->with('message','Category created succesfully');
     }
 
     /**
@@ -93,7 +91,7 @@ class CategoriesController extends Controller
          ]);
 
          return  redirect()->route('categories.index')
-             ->with('success','Category has been updated');
+             ->with('message','Category has been updated');
     }
 
     /**
@@ -106,6 +104,6 @@ class CategoriesController extends Controller
     {
         $category->delete();
         return  redirect()->route('categories.index')
-            ->with('success','Category has been delete');
+            ->with('message','Category has been delete');
     }
 }

@@ -15,11 +15,10 @@ return new class extends Migration
     {
         Schema::create('actions', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('slug')->unique()->nullable();
-            $table->text('body');
-            $table->longText('tecnische');
-            $table->decimal('price',8,2);
+            $table->json('title');
+            $table->json('body');
+            $table->json('tecnische');
+            $table->decimal('price',8,2)->nullable();
             $table->string('image_path');
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();

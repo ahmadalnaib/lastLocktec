@@ -6,6 +6,7 @@ use App\Models\Action;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class ActionController extends Controller
 {
@@ -17,8 +18,8 @@ class ActionController extends Controller
     public function index()
     {
 
-        $actions=Action::with('user','category')->paginate(10);
-        return view('actions.index',compact('actions'));
+        $actions = Action::with('user', 'category')->paginate(10);
+        return view('actions.index', compact('actions'));
     }
 
     /**
@@ -40,30 +41,33 @@ class ActionController extends Controller
     public function store(Request $request)
     {
 
-        $request->validate([
-            "title" => 'required',
-            "body" => 'required',
-            'category_id' => 'required',
-            "image_path" => "required|image|max:2048",
-            "price" => "required",
-            "tecnische" => "required",
-
-        ]);
 
 
-        $action = Action::create([
-            'title' => $request->title,
-            'body' => $request->body,
-            'tecnische' => $request->tecnische,
-            'image_path'=>$request->image_path->store('images','public'),
-            'price' => $request->price,
-            'category_id' => $request->category_id,
-            'user_id' => auth()->user()->id,
-            'slug' => str_slug($request->title),
-        ]);
+        foreach(config('locales.languages') as $key =>$val){
+            $attr['title.' .$key]= 'required';
+            $attr['body.' .$key]='required';
+            $attr['tecnische.' .$key]='required';
 
-        return redirect()->route('actions.index')
-        ->with('success','Actions Create successfully');
+
+        }
+
+        $validation=Validator::make($request->all(),$attr);
+
+        if($validation->fails()){
+            return redirect()->back()->withErrors($validation)->withInput();
+        }
+
+        // dd($request->all());
+        $data['title']=$request->title;
+        $data['body']=$request->body;
+        $data['tecnische']=$request->tecnische;
+        $data['price']=$request->price;
+        $data['image_path']=$request->image_path->store('images','public');
+        $data['user_id']= auth()->user()->id;
+        $data['category_id'] = $request->category_id;
+        $action = Action::create($data);
+        return redirect()->route('actions.index')->with('message','ActionsSite has been created');
+
     }
 
     /**
@@ -98,27 +102,24 @@ class ActionController extends Controller
      */
     public function update(Request $request, Action $action)
     {
-        $request->validate([
-            "title" => 'required',
-            "body" => 'required',
-            'category_id' => 'required',
-            "image_path" => "required|image|max:2048",
-            "price" => "required",
-            "tecnische" => "required",
 
-        ]);
-        $data=$request->only(['title','body','tecnische','price','category_id']);
-
-      if($request->hasFile('image_path')){
-          $image=$request->image_path->store('images','public');
-          Storage::disk('public')->delete($action->image_path);
-          $data['image_path']=$image;
-      }
+        if ($request->hasFile('image_path')) {
+            $image = $request->image_path->store('images', 'public');
+            Storage::disk('public')->delete($action->image_path);
+            $data['image_path'] = $image;
+        }
+        $data['title']=$request->title;
+        $data['body']=$request->body;
+        $data['tecnische']=$request->tecnische;
+        $data['price']=$request->price;
+        $data['user_id']= auth()->user()->id;
+        $data['category_id'] = $request->category_id;
+        dd($data);
         $action->update($data);
 
 
         return redirect()->route('actions.index')
-            ->with('success','Job updated successfully');
+        ->with('message','ActionSite updated successfully');
     }
 
     /**
@@ -130,10 +131,12 @@ class ActionController extends Controller
     public function destroy(Action $action)
     {
         // $this->authorize('delete',$action);
-      $action->delete();
-        Storage::disk('public')->delete($action->image_path);
         $action->delete();
-        return redirect()->back();
+        Storage::disk('public')->delete($action->image_path);
+        // $action->delete();
+        // return redirect()->back();
+        // $action = Action::where(app()->getLocale(), $action)->first()->delete();
+        return redirect()->route('actions.index')->with('message','ActionSite has been delete');;
     }
 
 

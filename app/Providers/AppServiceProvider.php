@@ -24,7 +24,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+
+        app()->setLocale(request()->segment(1));
+
         view()->composer(['actions','lists.categories'], 'App\Http\ViewComposers\CategoryComposer');
+
+
+
     }
 }
