@@ -77,7 +77,11 @@
         <div class="angebote__product">
           <div class="product__content p-4">
             <h2 class="product__title">{{$action->title}}</h2>
+            @if($action->price)
             <span class="product__price">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
+            @else
+            <span>More infomation about the price <a target="_blank" href="https://www.locktec.com/kontakt/">Contact us</a></span>
+            @endif
             <p class="product__parg">
 
             {{ $action->body }}
@@ -145,7 +149,11 @@
                <h2 >{{$action->title}}</h2>
                 <p>{{ $action->body }}</p>
                 <div class="swiper__price__footer">
-                  <span class="swiper__price">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
+                  @if($action->price)
+                  <span class="product__price">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
+                  @else
+                  <span>More infomation about the price <a target="_blank" href="https://www.locktec.com/kontakt/">Contact us</a></span>
+                  @endif
                   <button
                   data-bs-toggle="modal"
             data-bs-target="#a-{{$action->id}}"

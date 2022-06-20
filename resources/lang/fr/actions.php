@@ -27,7 +27,7 @@ return[
 'edit'=>'Edit',
 'delete'=>'Delete',
 'add_category'=>'Add Categoy',
-'There_are_no_Action'=>'There are no Action',
+'There_are_no_Action'=>"Il n'y a pas d'action",
 'Search_the_lockers'=>'Fouillez les casiers.',
 'Technical_specifications'=>'Spécifications techniques',
 'currently'=>"Il n'y a actuellement aucun produit de réduction disponible pour cette catégorie.",
