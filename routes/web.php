@@ -45,11 +45,11 @@ Route::resource('/categories',CategoriesController::class)->middleware('auth');
 // meta
 
 
-Route::get('/meta',[MetaController::class,'index'])->name('meta.index');
-Route::get('/meta/create',[MetaController::class,'create'])->name('meta.create');
-Route::post('/meta',[MetaController::class,'store'])->name('meta.store');
-Route::get('/meta/{meta}/edit',[MetaController::class,'edit'])->name('meta.edit');
-Route::put('/update/{meta}',[MetaController::class,'update'])->name('meta.update');
+Route::get('/meta',[MetaController::class,'index'])->name('meta.index')->middleware('auth');
+Route::get('/meta/create',[MetaController::class,'create'])->name('meta.create')->middleware('auth');
+Route::post('/meta',[MetaController::class,'store'])->name('meta.store')->middleware('auth');
+Route::get('/meta/{meta}/edit',[MetaController::class,'edit'])->name('meta.edit')->middleware('auth');
+Route::put('/update/{meta}',[MetaController::class,'update'])->name('meta.update')->middleware('auth');
 
 
 

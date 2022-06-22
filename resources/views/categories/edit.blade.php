@@ -6,7 +6,7 @@
     <div class="container mt-5">
         <div class="card card-default">
             <div class="card-header">
-                Edit category
+               {{__('actions.Edit_category')}}
             </div>
 
             <div class="card-body">
@@ -58,7 +58,7 @@
 
       </div>
                     <div class="form-group mt-4">
-                        <button class="btn btn-success">Update Category</button>
+                        <button class="btn btn-success">{{__('actions.Update_category')}}</button>
                     </div>
                 </form>
             </div>

@@ -14,16 +14,16 @@
 @endforeach
 @endif
 <div class="col-md-12 bg-white p-4">
-  <h2 class="my-4">Edit Action</h2>
+  <h2 class="my-4">{{__('actions.Edit_Action')}}</h2>
   <form action="{{route('actions.update',$action->id)}}" method="post" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 
-    <div class="form-group mb-3 p-3">
-        <label for="title">
-            Category:
+    <div class="form-group mb-3 ">
+        <label for="title ">
+           {{__('actions.choose_product')}} 
           </label>
-      <select name="category_id" class="form-control">
+      <select name="category_id" class="form-select">
         @include('lists.categories')
       </select>
     </div>
@@ -48,13 +48,13 @@
         @foreach (config('locales.languages') as $key => $val)
         <div class="tab-pane fade {{$loop->index ==0 ? 'show active' :''}}" id="{{$key}}" role="tabpanel" aria-labelledby="{{$key}}-tab">
 
-          <div class="form-group mb-3 p-3">
+          <div class="form-group mt-3 mb-3">
             <label for="title">
                 {{__('actions.title')}} ({{$key}})
               </label>
           <input type="text" class="form-control" name="title[{{$key}}]" value="{{old('title.' . $key,$action->getTranslation('title',$key))}}" placeholder="Title">
         </div>
-        <div class="form-group mb-3 p-3">
+        <div class="form-group mb-3 ">
             <label  for="body">
                 Body: ({{$key}})
               </label>
@@ -62,7 +62,7 @@
           {{old('body.' .$key,$action->getTranslation('body',$key))}}
          </textarea>
         </div>
-        <div class="form-group mb-3 p-3">
+        <div class="form-group mb-3 ">
             <label  for="body">
                 Tecnische Details: ({{$key}})
               </label>
@@ -70,25 +70,25 @@
             {{old('tecnische.' .$key,$action->getTranslation('tecnische',$key))}}
           </textarea>
         </div>
-        <div class="form-group mb-3 p-3">
-            <label  for="price">
-                Price: ({{$key}})
-              </label>
-          <input type="text" class="form-control" name="price[{{$key}}]" value="{{old('price.' .$key,$action->getTranslation('price',$key))}}" placeholder="Price">
-        </div>
+      
         </div>
         @endforeach
 
       </div>
+      <div class="form-group mb-3 ">
+        <label  for="price">
+            Price:
+          </label>
+      <input type="text" class="form-control"  name="price" value="{{$action->price}}" placeholder="Price">
+    </div>
 
-
-    <div class="form-group mb-3 p-3">
+    <div class="form-group mb-3 ">
       <label for="details">upload Image</label>
       <td><img width="100px" height="100px"  class="img-thumbnail " src="{{asset('storage/'.$action->image_path)}}" alt=""></td>
       <input type="file" name="image_path" class="form-control">
     </div>
 
-    <button type="submit" class="btn  btn-danger">Update</button>
+    <button type="submit" class="btn  btn-danger">{{__('actions.Update_Action')}}</button>
   </form>
 </div>
 

@@ -150,7 +150,7 @@
                 <p>{{ $action->body }}</p>
                 <div class="swiper__price__footer">
                   @if($action->price)
-                  <span class="product__price">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
+                  <span class="product__price d-block">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
                   @else
                   <span class="d-block ">{{__('actions.More_infomation_about_the_price')}} <a class="mb-2" target="_blank" href="https://www.locktec.com/kontakt/">{{__('actions.Contact_us')}}</a></span>
 

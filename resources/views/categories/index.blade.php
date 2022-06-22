@@ -9,7 +9,7 @@
 
 
         <div class="card card-default">
-            <div class="card-header ">Categories</div>
+            <div class="card-header">{{__('actions.Categories')}}</div>
 
             @if($categories->count())
                 <div class="card-body">

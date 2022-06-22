@@ -47,6 +47,7 @@ class ActionController extends Controller
             $attr['title.' .$key]= 'required';
             $attr['body.' .$key]='required';
             $attr['tecnische.' .$key]='required';
+            
 
 
         }
@@ -114,7 +115,7 @@ class ActionController extends Controller
         $data['price']=$request->price;
         $data['user_id']= auth()->user()->id;
         $data['category_id'] = $request->category_id;
-        dd($data);
+       
         $action->update($data);
 
 

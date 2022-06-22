@@ -23,10 +23,9 @@ return[
 'go'=>' to main site',
 'back'=>'Back',
 'add'=>'Add New Action Site',
-'add_category'=>'Add Category',
 'edit'=>'Edit',
 'delete'=>'Delete',
-'add_category'=>'Add Categoy',
+'add_category'=>'Add Product',
 'There_are_no_Action'=>'There are no Action',
 'Search_the_lockers'=>'Search the lockers.',
 'Technical_specifications'=>'Technical Specifications',
@@ -34,16 +33,22 @@ return[
 'Contact_us'=>'Contact us',
 'Close'=>'Close',
 'ActionsSite'=>'ActionsSite',
-'Categories'=>'Categories',
+'Categories'=>'Product',
 'Total_Actions'=>'Total Actions',
 'More_Info'=>'More Info',
-'Total_Categories'=>'Total Categories',
-'Manage_categories'=>'Manage Categories',
+'Total_Categories'=>'Total Products',
+'Manage_categories'=>'Manage Product',
 'Manage_actions'=>'Manage Actions',
 'Manage_meta'=>'Manage Meta',
 'add_meta'=>'Add Meta',
 "Edit_Meta"=>"Edit Meta",
 "Update_Meta"=>"Update Meta",
+"Edit_Action"=>"Edit Action ",
+
+"Update_Action"=>"Update Action ",
+"choose_product"=>"Choose a product",
+"Update_category"=>"Update Product",
+"Edit_category"=>"Edit Product"
 
 
 

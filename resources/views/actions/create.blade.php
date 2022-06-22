@@ -20,9 +20,9 @@
 
     <div class="form-group mb-3 p-3">
       <label for="title">
-          Category:
+        {{__('actions.choose_product')}} 
         </label>
-    <select name="category_id" class="form-control">
+    <select name="category_id" class="form-select">
       @include('lists.categories')
     </select>
   </div>
@@ -67,12 +67,7 @@
           {{old('tecnische.' .$key)}}
         </textarea>
       </div>
-      <div class="form-group mb-3 p-3">
-          <label  for="price">
-              Price: ({{$key}})
-            </label>
-        <input type="text" class="form-control" name="price" value="{{old('price.' .$key)}}" placeholder="Price">
-      </div>
+   
       </div>
       @endforeach
 
@@ -109,7 +104,12 @@
       <input type="text" class="form-control" name="price"  placeholder="Price">
     </div> --}}
 
-
+    <div class="form-group mb-3 p-3">
+      <label  for="price">
+          Price:
+        </label>
+    <input type="text" class="form-control" name="price" value="{{old('price')}}" placeholder="Price">
+  </div>
 
     <div class="form-group mb-3 p-3">
       <label for="image_path">upload Image:</label>
