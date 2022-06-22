@@ -21,7 +21,7 @@
     rel="stylesheet"
     href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
   />
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet"  defer>
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     
 

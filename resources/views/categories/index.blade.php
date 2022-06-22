@@ -16,6 +16,7 @@
                     <table class="table">
                         <thead>
                         <th>Name</th>
+                        <th>Created  at</th>
                         <th>Edit</th>
                         <th>Delete</th>
                         </thead>
@@ -25,7 +26,7 @@
                                 <td>
                                     <p>{{$category->title}}</p>
                                 </td>
-
+                                <td>{{$category->created_at->diffForHumans()}}<br>{{$category->created_at}}</td>
 
                                 <td>
                                     <a href="{{route('categories.edit',$category->id)}}" class="btn btn-dark">{{__('actions.edit')}}</a>

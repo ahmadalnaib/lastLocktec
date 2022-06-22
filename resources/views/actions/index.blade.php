@@ -55,6 +55,7 @@
                   <th>Writer  </th>
 
                   <th>Categories  </th>
+                  <th>Created at</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
@@ -69,6 +70,7 @@
                   <td>{{ str_limit($action->body,100)}}</td>
                   <td>{{$action->user->name}}</td>
                   <td>{{$action->category->title ?? 'No Cateory'}}</td>
+                  <td>{{$action->created_at->diffForHumans()}}<br>{{$action->created_at}}</td>
                   <td>
                     <a class="btn btn-primary" href="{{route('actions.edit',$action->id)}}">
                       <i class="fa fa-edit "></i>
