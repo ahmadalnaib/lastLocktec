@@ -1,14 +1,35 @@
 
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ @foreach ($metas as $meta)
+
+ <meta name="keywords" content="{{$meta->keywords}}">
+ <meta name="description" content="{{$meta->description}}">
+ <title> {{ $meta->title }}</title>
+ @endforeach
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
 
 
-@include('partials.header')
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  defer>
+    <link    href="{{ asset('css/app.css') }}" rel="stylesheet" defer>
+    <link     href="{{ asset('css/custom.css') }}" rel="stylesheet" defer>
 
-   @include('partials.langNav')
+
+</head>
+<body>
+  @include('partials.langNav')
     <!-- contianer -->
     <!-- Header Section -->
-    <body class="bg-white">
+
     <section class="header__main bg-gray ">
     <div class="container">
         <h1 class="header__title">{{__('actions.Hier_finden')}}</h1>
@@ -196,12 +217,13 @@
 
     </div>
 
+   <!-- Scripts -->
+   <script   src="{{ asset('js/app.js') }}" defer></script>
+    <script  src="https://kit.fontawesome.com/ca11177b7a.js" crossorigin="anonymous" defer></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 
-    <script src="https://kit.fontawesome.com/ca11177b7a.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="{{ asset('js/custom.js') }}" ></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script  src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+    <script  src="{{ asset('js/custom.js') }}"  defer></script>
 </body>
 </html>

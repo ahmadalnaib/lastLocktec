@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@include('partials.navbar')
+
 @section('content')
 @if (session('msg'))
 <div class="alert alert-success">
