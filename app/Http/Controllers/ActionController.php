@@ -137,7 +137,7 @@ class ActionController extends Controller
         // $action->delete();
         // return redirect()->back();
         // $action = Action::where(app()->getLocale(), $action)->first()->delete();
-        return redirect()->route('actions.index')->with('message','ActionSite has been delete');;
+        return redirect()->route('actions.index')->with('warning','ActionSite has been delete');;
     }
 
 

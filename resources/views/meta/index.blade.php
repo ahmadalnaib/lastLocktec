@@ -15,6 +15,7 @@
 
             @if($metas->count())
                 <div class="card-body">
+                    <div class="table-responsive">
                     <table class="table">
                         <thead>
                       <th>Title</th>
@@ -52,6 +53,7 @@
 
                     {!! $metas->links() !!}
                 </div>
+                
 
 
 
@@ -60,6 +62,7 @@
                     <p>There are no Metas</p>
                 </div>
             @endif
+        </div>
         </div>
         <a href="{{route('home')}}" class="btn btn-outline-dark mt-4">{{__('actions.back')}}</a>
     </div>

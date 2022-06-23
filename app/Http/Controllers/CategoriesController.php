@@ -48,7 +48,7 @@ class CategoriesController extends Controller
               $data['title']=$request->title;
               $category = Category::create($data);
               return  redirect()->route('categories.index')
-              ->with('message','Category created succesfully');
+              ->with('message','Product created succesfully');
     }
 
     /**
@@ -91,7 +91,7 @@ class CategoriesController extends Controller
          ]);
 
          return  redirect()->route('categories.index')
-             ->with('message','Category has been updated');
+             ->with('message','Product has been updated');
     }
 
     /**
@@ -104,6 +104,6 @@ class CategoriesController extends Controller
     {
         $category->delete();
         return  redirect()->route('categories.index')
-            ->with('message','Category has been delete');
+            ->with('warning','Product has been delete');
     }
 }

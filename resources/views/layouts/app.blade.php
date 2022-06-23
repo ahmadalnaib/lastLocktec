@@ -34,7 +34,7 @@
       
       
                 <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav me-auto ">
+                <ul class="navbar-nav ms-auto ">
                 
               
                  @include('partials.langNav')
@@ -112,8 +112,15 @@
 
         <main class="py-4 container">
             @if(session()->has('message'))
-            <div class="alert alert-success">
-                {{ session()->get('message') }}
+            <div class="alert alert-success alert-dismissible fade show">
+               <strong> {{ session()->get('message') }}</strong>
+               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            @elseif(session()->has('warning'))
+            <div class="alert alert-warning alert-dismissible fade show">
+             <strong>   {{ session()->get('warning') }}</strong>
+             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         @endif
             @yield('content')

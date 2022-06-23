@@ -13,6 +13,7 @@
 
             @if($categories->count())
                 <div class="card-body">
+                    <div class="table-responsive">
                     <table class="table">
                         <thead>
                         <th>Name</th>
@@ -46,6 +47,7 @@
 
                     {!! $categories->links() !!}
                 </div>
+               
 
 
 
@@ -54,6 +56,7 @@
                     <p>There are no categories</p>
                 </div>
             @endif
+        </div>
         </div>
         <a href="{{route('home')}}" class="btn btn-outline-dark mt-4">{{__('actions.back')}}</a>
     </div>
