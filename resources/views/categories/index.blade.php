@@ -30,13 +30,13 @@
                                 <td>{{$category->created_at->diffForHumans()}}<br>{{$category->created_at}}</td>
 
                                 <td>
-                                    <a href="{{route('categories.edit',$category->id)}}" class="btn btn-dark">{{__('actions.edit')}}</a>
+                                    <a href="{{route('categories.edit',$category->id)}}" class="btn btn-primary">  <i class="fa fa-edit "></i></a>
                                 </td>
                                 <td>
                                     <form action="{{route('categories.destroy',$category->id)}}" method="post">
                                         @csrf
                                         @method('delete')
-                                        <button  onclick="return confirm('are you sure ?')"  class="btn btn-danger" type="submit">{{__('actions.delete')}}</button>
+                                        <button  onclick="return confirm('Sind Sie dir sicher ? 😨')"  class="btn btn-danger" type="submit"><i class="fa fa-trash "></i></button>
                                     </form>
                             </td>
                             </tr>

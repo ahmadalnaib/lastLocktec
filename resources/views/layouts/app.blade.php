@@ -63,14 +63,15 @@
              </li>
              <li>
         
-              <a href="{{route('actions.index')}}"><i class="bi bi-back "></i> {{__('actions.Manage_actions')}} 
-           </a>
-             </li>
-             <li>
-        
               <a href="{{route('categories.index')}}"><i class="bi bi-collection-fill "></i> {{__('actions.Manage_categories')}}
                </a>
              </li>
+             <li>
+        
+              <a href="{{route('actions.index')}}"><i class="bi bi-back "></i> {{__('actions.Manage_actions')}} 
+           </a>
+             </li>
+         
         
              <li>
         

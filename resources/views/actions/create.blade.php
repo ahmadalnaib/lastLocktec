@@ -106,17 +106,17 @@
 
     <div class="form-group mb-3 p-3">
       <label  for="price">
-          Price:
+       {{__('actions.Price')}}
         </label>
-    <input type="text" class="form-control" name="price" value="{{old('price')}}" placeholder="Price">
+    <input type="text" class="form-control" name="price" value="{{old('price')}}" >
   </div>
 
     <div class="form-group mb-3 p-3">
-      <label for="image_path">upload Image:</label>
+      <label for="image_path">{{__('actions.Upload_Image')}}</label>
       <input type="file" name="image_path" class="form-control">
      <div class="mt-2">
-        <small class="text-muted">Max Image Width:1200*Height:800</small><br>
-        <small class="text-muted">Max Image Size:2048</small>
+        <small class="text-dark bg-warning p-1" >{{__('actions.Please')}} <a target="_blank" href="https://convertio.co/">Converter</a></small><br>
+       
      </div>
     </div>
 

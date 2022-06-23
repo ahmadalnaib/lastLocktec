@@ -50,7 +50,12 @@ Lieferung.',
 "Update_Action"=>"Action aktualisieren",
 "Update_category"=>"Produkt aktualisieren",
 "More_infomation_about_the_price"=>"Weitere Informationen über den Preis",
-"choose_product"=>"Wählen  ein Produkt"
+"choose_product"=>"Wählen  ein Produkt",
+"Upload_Image"=>"Bild hochladen",
+"Price"=>"Preis",
+"Please"=>"Bitte, das Bild ist im Webp-Format",
+
+
 
 
 

@@ -100,7 +100,7 @@ class MetaController extends Controller
 
 
         return redirect()->route('meta.index')
-        ->with('message','Meta updated successfully');
+        ->with('message','Meta erfolgreich aktualisiert 🎉');
 
 
     }

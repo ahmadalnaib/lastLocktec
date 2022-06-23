@@ -67,7 +67,7 @@ class ActionController extends Controller
         $data['user_id']= auth()->user()->id;
         $data['category_id'] = $request->category_id;
         $action = Action::create($data);
-        return redirect()->route('actions.index')->with('message','ActionsSite has been created');
+        return redirect()->route('actions.index')->with('message','Aktionsseite wurde erstellt 🎉');
 
     }
 
@@ -120,7 +120,7 @@ class ActionController extends Controller
 
 
         return redirect()->route('actions.index')
-        ->with('message','ActionSite updated successfully');
+        ->with('message','Aktionsseite wurde aktualisiert 🎉');
     }
 
     /**
@@ -137,7 +137,7 @@ class ActionController extends Controller
         // $action->delete();
         // return redirect()->back();
         // $action = Action::where(app()->getLocale(), $action)->first()->delete();
-        return redirect()->route('actions.index')->with('warning','ActionSite has been delete');;
+        return redirect()->route('actions.index')->with('warning','Aktionsseite wurde gelöscht 🗑');;
     }
 
 

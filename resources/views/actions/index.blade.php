@@ -80,7 +80,7 @@
                     <form method="post" action="{{route('actions.destroy',$action)}}">
                       @csrf
                       @method('DELETE')
-                      <button onclick="return confirm('are you sure ?')"  type="submit" class="btn btn-danger "><i class="fa fa-trash "></i> </button>
+                      <button onclick="return confirm('Sind Sie dir sicher ? 😨')"  type="submit" class="btn btn-danger "><i class="fa fa-trash "></i> </button>
                     </form>
                   </td>
                 </tr>

@@ -48,7 +48,10 @@ return[
 "Update_Action"=>"Update Action ",
 "choose_product"=>"Choose a product",
 "Update_category"=>"Update Product",
-"Edit_category"=>"Edit Product"
+"Edit_category"=>"Edit Product",
+"Upload_Image"=>"Upload Image",
+"Price"=>"Price",
+"Please"=>"Please, the image is in webp format"
 
 
 
