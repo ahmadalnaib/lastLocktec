@@ -95,7 +95,7 @@
         @if($actions->count())
     @foreach ($actions as $action)
 
-        <div class="angebote__product">
+        <div class="angebote__product a">
           <div class="product__content p-4">
             <h2 class="product__title">{{$action->title}}</h2>
             @if($action->price)
@@ -105,7 +105,7 @@
             @endif
             <p class="product__parg">
 
-            {{ $action->body }}
+              {{str_limit($action->body,200) }}
             </p>
             <button  class="product__button"
             data-bs-toggle="modal"
@@ -116,7 +116,7 @@
           </div>
 
           <div class="product__img-1">
-            <img src="{{asset('storage/'.$action->image_path)}}" alt="locker" />
+            <img  src="{{asset('storage/'.$action->image_path)}}" alt="locker" />
           </div>
         </div>
 
@@ -159,48 +159,48 @@
 
         @if($category->actions->count() > 0)
           <!-- Slider main container -->
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+          
+          
+        
+          @foreach($category->actions as $a)
               <!-- Slides -->
-
-              @foreach($category->actions as $action)
-              <div class="swiper-slide">
-                <img src="{{asset('storage/'.$action->image_path)}}" alt="">
-               <h2 >{{$action->title}}</h2>
-                <p>{{ $action->body }}</p>
-                <div class="swiper__price__footer">
-                  @if($action->price)
-                  <span class="product__price d-block">ab {{$action->price}} <i class="bi bi-currency-euro"></i></span>
+              
+              <div class="angebote__product2 ">
+                <div class="product__content2 p-4">
+                  <h2 class="product__title2">{{$a->title}}</h2>
+                  @if($a->price)
+                  <span class="product__price2">ab {{$a->price}} <i class="bi bi-currency-euro"></i></span>
                   @else
-                  <span class="d-block ">{{__('actions.More_infomation_about_the_price')}} <a class="mb-2" target="_blank" href="https://www.locktec.com/kontakt/">{{__('actions.Contact_us')}}</a></span>
-
-               
+                  <span>{{__('actions.More_infomation_about_the_price')}} <a target="_blank" href="https://www.locktec.com/kontakt/">{{__('actions.Contact_us')}}</a></span>
                   @endif
-                  <button
+                  <p class="product__parg2">
+      
+                  {{str_limit($a->body,200) }}
+                  </p>
+                  <button  class="product__button2"
                   data-bs-toggle="modal"
-            data-bs-target="#a-{{$action->id}}"
-                  class="swiper__button"
-                >
-              {{__('actions.Technical_specifications')}}
-                </button>
-                 </div>
+                  data-bs-target="#b-{{$a->id}}">
+                  {{__('actions.Technical_specifications')}}
+                  </button>
+      
+                </div>
+      
+                <div class="product__img-12">
+                  <img src="{{asset('storage/'.$a->image_path)}}" alt="locker" />
+                </div>
               </div>
-
+      
+          
+      
+              @include('partials.a')
+            
+        
+            
               @endforeach
-
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev text-danger"></div>
-            <div class="swiper-button-next text-danger"></div>
-
-          </div>
-
-
-        </div>    @else
+           
+        </div>
+       
+         @else
         <div class="lead text-center">
             <div>{{__('actions.currently')}}</div>
         </div>

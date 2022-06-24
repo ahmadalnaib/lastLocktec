@@ -1,3 +1,333 @@
-body{margin:3rem auto;max-width:1220px}.header__main{background:#f1f1f1;margin-top:1rem;padding:10rem}.header__main .header__title{color:#ce111e;font-size:3rem;font-weight:700;letter-spacing:1px}.header__main .header__subtitle{color:#444;font-size:1.7rem}.showcase__main{margin-top:4rem;position:relative}.showcase__main .showcase__title{color:#ce111e;font-weight:800;letter-spacing:1px;margin-bottom:2rem}.showcase__main .showcase__subtitle{color:#444;font-size:1.4rem}.showcase__main .showcase__parg{font-size:1.2rem;line-height:1.7;text-align:left}.showcase__main .showcase__img{border-radius:20px;margin-top:1rem;width:100%}#Kontaktlose{background:#ce111e;border-radius:20px;color:#fff;display:flex;flex-wrap:wrap;justify-content:space-around;padding:2rem}.Kontaktlose-content ul li{font-size:22px;margin-left:30px}.angebote__main .angebote__title{color:#ce111e;font-size:3.4rem;margin-top:2rem}.angebote__product{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;margin-bottom:10rem;margin-top:4rem}.angebote__product:nth-child(4){flex-direction:row-reverse}.product__content .product__title{font-size:2.5rem;margin-bottom:10px}.product__price{background:#ce111e;border-radius:5px;color:#fff;margin:10px 0;padding:3px 10px}.product__content .product__parg{font-size:1.2rem;margin-top:10px;max-width:500px;text-align:left}.product__button{background:transparent;border:1px solid #ce111e;border-radius:20px;color:#ce111e;cursor:pointer;padding:10px 20px;transition:all .3s ease-in}.product__button:hover{background:#ce111e;color:#fff;cursor:pointer}.product__img-1 img{border-bottom-right-radius:30px;border-top-right-radius:30px;max-width:500px;padding-left:1rem}.carousel__product__title{margin-bottom:2rem}.swiper{height:100%;width:100%}.swiper-wrapper{display:grid;grid-auto-rows:1fr;grid-template-columns:repeat(100,1fr);padding:1rem 0}.swiper-slide{align-items:center;background:#fff;border:1px solid #f1f1f1;display:flex;flex-direction:column;font-size:18px;justify-content:center;padding:1rem;transition:all .3s ease-out;transition:all .3s ease}.swiper-slide h2{align-self:flex-start;font-size:22px;margin-top:30px}.swiper-slide p{align-self:flex-start;margin-top:5px}.swiper-slide:hover{box-shadow:0 5px 15px 0 rgba(0,0,0,.15)}.swiper-slide img{height:250px;-o-object-fit:contain;object-fit:contain;width:250px;width:100%}.swiper__price{background:#ce111e;border-radius:5px;color:#fff;display:block;font-size:15px;margin:10px 0;min-width:138px;padding:3px 6px}.swiper__button{background:transparent;border:1px solid #ce111e;color:#ce111e;cursor:pointer;padding:5px 10px;transition:all .3s ease-in}.swiper__button:hover{background:#ce111e;color:#fff;cursor:pointer}.swiper__price__footer{align-self:flex-start;margin-top:auto}.carousel__main .carousel__title{color:#ce111e;font-size:3.4rem}.carousel__main .carousel__parg{font-size:1.5rem}.carousel__product .carousel__product__title{font-size:2.5rem;margin-top:6rem;text-align:center}.just-for-mob{display:none}@media screen and (max-width:820px){.angebote__main .angebote__product{flex-wrap:wrap}.angebote__main .angebote__product .product__img{margin-top:1rem}.header__main .header__title{font-size:2.8rem;font-weight:400;letter-spacing:1px}.header__main .header__subtitle{font-size:1.4rem}.angebote__main .angebote__title{color:#ce111e;font-size:2.4rem}.carousel__product .carousel__product__title{font-size:1.5rem;margin-top:6rem;text-align:center}.angebote__main .angebote__product .product__img img{max-width:340px}.space-b{margin-bottom:15rem}}@media screen and (max-width:469px){.header__main{background:#f1f1f1;margin-top:1rem;padding:2rem}.header__main .header__title{font-size:1.7rem;font-weight:400;letter-spacing:0}.header__main .header__subtitle{font-size:1rem}}
+body {
+    margin: 3rem auto;
+    max-width: 1420px;
+   background: #fff;
+}
+.header__main {
+    background: #f9f9f9;
+    margin-top: 1rem;
+    padding: 10rem;
+}
+.header__main .header__title {
+    color: #ce111e;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.header__main .header__subtitle {
+    color: #444;
+    font-size: 1.7rem;
+}
+.showcase__main {
+    margin-top: 4rem;
+    position: relative;
+}
+.showcase__main .showcase__title {
+    color: #ce111e;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+.showcase__main .showcase__subtitle {
+    color: #444;
+    font-size: 1.4rem;
+}
+.showcase__main .showcase__parg {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: left;
+}
+.showcase__main .showcase__img {
+    border-radius: 20px;
+    margin-top: 1rem;
+    width: 100%;
+}
+#Kontaktlose {
+    background: #ce111e;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+}
+.Kontaktlose-content ul li {
+    font-size: 22px;
+    margin-left: 30px;
+}
+.angebote__main .angebote__title {
+    color: #ce111e;
+    font-size: 3.4rem;
+    margin-top: 2rem;
+}
+.angebote__product {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+    margin-top: 4rem;
+}
+.a:nth-child(4) {
+    flex-direction: row-reverse;
+}
+.product__content .product__title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.product__price {
+    background: #ce111e;
+    border-radius: 5px;
+    color: #fff;
+    margin: 10px 0;
+    padding: 3px 10px;
+}
+.product__content .product__parg {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    max-width: 500px;
+    text-align: left;
+}
+.product__button {
+    background: transparent;
+    border: 1px solid #ce111e;
+    border-radius: 20px;
+    color: #ce111e;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in;
+}
+.product__button:hover {
+    background: #ce111e;
+    color: #fff;
+    cursor: pointer;
+}
+.product__img-1 img {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    max-width: 500px;
+    padding-left: 1rem;
+}
+.carousel__product__title {
+    margin-bottom: 2rem;
+}
 
-/*# sourceMappingURL=custom.css.map*/
+/* .swiper {
+    height: 100%;
+    width: 100%;
+   
+}
+.swiper-wrapper {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(100, 1fr);
+    padding: 1rem 0;
+}
+.swiper-slide {
+     align-items: center;
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    justify-content: center;
+    padding: 1rem;
+    transition: all 0.3s ease-out;
+    transition: all 0.3s ease; 
+}
+.swiper-slide h2 {
+    align-self: flex-start;
+    font-size: 22px;
+    margin-top: 30px;
+}
+.swiper-slide p {
+    align-self: flex-start;
+    margin-top: 5px;
+}
+.swiper-slide:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.swiper-slide img {
+    height: 250px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 250px;
+    width: 100%;
+}
+.swiper__price {
+    background: #ce111e;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    margin: 10px 0;
+    min-width: 138px;
+    padding: 3px 6px;
+}
+.swiper__button {
+    background: transparent;
+    border: 1px solid #ce111e;
+    color: #ce111e;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in;
+}
+.swiper__button:hover {
+    background: #ce111e;
+    color: #fff;
+    cursor: pointer;
+}
+.swiper__price__footer {
+    align-self: flex-start;
+    margin-top: auto;
+} */
+.carousel__main .carousel__title {
+    color: #ce111e;
+    font-size: 3.4rem;
+}
+.carousel__main .carousel__parg {
+    font-size: 1.5rem;
+}
+.carousel__product .carousel__product__title {
+    font-size: 3.5rem;
+    margin-top: 6rem;
+    text-align: center;
+}
+.just-for-mob {
+    display: none;
+}
+
+
+
+
+
+
+
+
+.angebote__product2 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+    margin-top: 4rem;
+    background: #f9f9f9;
+    padding: 1rem;
+}
+
+.product__content2 .product__title2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.product__price2 {
+    background: #ce111e;
+    border-radius: 5px;
+    color: #fff;
+    margin: 10px 0;
+    padding: 3px 10px;
+}
+.product__content2 .product__parg2 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    max-width: 500px;
+    text-align: left;
+}
+.product__button2 {
+    background: transparent;
+    border: 1px solid #ce111e;
+    border-radius: 20px;
+    color: #ce111e;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in;
+}
+.product__button2:hover {
+    background: #ce111e;
+    color: #fff;
+    cursor: pointer;
+}
+.product__img-12 img {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    max-width: 500px;
+    padding-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 820px) {
+    .angebote__main .angebote__product {
+        flex-wrap: wrap;
+    }
+    .angebote__main .angebote__product .product__img {
+        margin-top: 1rem;
+    }
+    .header__main .header__title {
+        font-size: 2.8rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    .header__main .header__subtitle {
+        font-size: 1.4rem;
+    }
+    .angebote__main .angebote__title {
+        color: #ce111e;
+        font-size: 2.4rem;
+    }
+    .carousel__product .carousel__product__title {
+        font-size: 1.5rem;
+        margin-top: 6rem;
+        text-align: center;
+    }
+    .angebote__main .angebote__product .product__img-1 img {
+        max-width: 340px;
+    }
+    .space-b {
+        margin-bottom: 15rem;
+    }
+}
+@media screen and (max-width: 469px) {
+    .header__main {
+        background: #f1f1f1;
+        margin-top: 1rem;
+        padding: 2rem;
+    }
+    .header__main .header__title {
+        font-size: 1.7rem;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+    .header__main .header__subtitle {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 820px) {
+    
+  
+  
+   .angebote__product2 .product__img-12 img {
+    max-width: 100%;
+    height: auto;
+   margin-top: 1rem;
+    }
+
+
+    .angebote__product  .product__img-1 img {
+        max-width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+   
+  
+}
+

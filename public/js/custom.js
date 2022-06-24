@@ -3,10 +3,10 @@
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 10,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
   breakpoints: {
     500: {
       slidesPerView: 2,
